@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mapp">
 <head>
 	<title>Marquee App</title>
 	
@@ -10,6 +10,8 @@
 <body>
 	<section class="container">
 		<h1>Marquee App</h1>
+		<h2>{{ name }}</h2>
+		<input type="text" ng-model="name" />
 	</section>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
