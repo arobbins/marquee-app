@@ -8,12 +8,12 @@
 
 </head>
 <body>
-	<section class="container">
-		<h1>Marquee App</h1>
-		<h2>{{ name }}</h2>
-		<input type="text" ng-model="name" />
+	<section class="container" ng-controller="first">
+		<ul ng-repeat="marquee in marquees">
+			<li>{{marquee.contentkey}}</li>
+		</ul>
 	</section>
-
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
 </body>
 </html>
