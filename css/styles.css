@@ -1,5 +1,11 @@
-ul {
-  margin-bottom: 0.4em; }
+body {
+  min-width: 600px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative; }
 
-li, p {
-  font-size: 1.3em; }
+img {
+  max-width: 100%;
+  height: auto;
+  border-width: 0;
+  vertical-align: middle; }
