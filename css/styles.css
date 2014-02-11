@@ -9,3 +9,7 @@ img {
   height: auto;
   border-width: 0;
   vertical-align: middle; }
+
+#marquee {
+  float: left;
+  margin: 1em 0em; }

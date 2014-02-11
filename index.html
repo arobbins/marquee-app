@@ -10,21 +10,92 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header>
-		<h1><i class="glyphicon glyphicon-fire"></i> <strong>Marquee App<strong></h1>
-		<p class="text-muted">Making Amtrak less monotonous since 2014</p>
+	<header class="container col-md-12">
+		<h3><i class="fa fa-flask"></i> <strong>Marquee App</strong></h3>
 	</header>
+
 	<section id="marquee">
 		<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
 	</section>
-	<section class="container" ng-controller="first">
+
+	<!-- <section class="container" ng-controller="first">
 		<ul ng-repeat="marquee in marquees">
 			<li>{{marquee.contentkey}}</li>
 		</ul>
+	</section> -->
+
+	<section class="container col-md-12" id="controls">
+		<div class="row">
+
+			<!-- Templates -->
+			<div class="btn-group dropup col-xs-1">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Templates <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li role="presentation" class="dropdown-header">Generic Items</li>
+					<li><a href="#">Left</a></li>
+					<li><a href="#">Right</a></li>
+					<li><a href="#">Center</a></li>
+					<li><a href="#">Partner</a></li>
+					<li><a href="#">Routes</a></li>
+					<li><a href="#">Tiers</a></li>
+					<li><a href="#">Boardingbonus</a></li>
+					<li class="divider"></li>
+					<li role="presentation" class="dropdown-header">Promotions</li>
+					<li><a href="#">Left</a></li>
+					<li><a href="#">Right</a></li>
+					<li><a href="#">Center</a></li>
+				</ul>
+			</div>
+
+			<!-- Theme -->
+			<div class="btn-group dropup col-xs-1">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Themes <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Light</a></li>
+					<li><a href="#">Dark</a></li>
+				</ul>
+			</div>
+
+			<!-- Button Icons -->
+			<div class="btn-group dropup col-xs-2">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Button Icons <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Retail</a></li>
+					<li><a href="#">Cars</a></li>
+					<li><a href="#">Travel</a></li>
+					<li><a href="#">Finance</a></li>
+					<li><a href="#">Hotels</a></li>
+					<li><a href="#">Train</a></li>
+					<li><a href="#">PFS</a></li>
+				</ul>
+			</div>
+
+			<!-- Inputs -->
+			<form class="col-xs-6">
+				<input type="text" class="form-control" placeholder="Header copy"><br />
+				<textarea class="form-control" rows="3" placeholder="Body copy"></textarea><br />
+				<input type="text" class="form-control" placeholder="Button copy">
+			</form>
+
+		</div>
 	</section>
+
 	<!-- Angular -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+	<!-- Bootstrap Jquery -->
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 	<!-- Custom JS -->
 	<script type="text/javascript" src="../js/app.js"></script>
+
 </body>
 </html>
