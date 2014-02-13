@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="mapp">
+<html ng-app="app">
 <head>
 	<title>Marquee App</title>
 	<!-- Bootstrap -->
@@ -11,18 +11,18 @@
 </head>
 <body>
 	<header class="container col-md-12">
-		<h4><i class="fa fa-flask"></i> <strong>Marquee App</strong></h4>
+		<h4><i class="fa fa-flask"></i> <strong>Marquee App</strong></h4>	
 	</header>
 
 	<section id="marquee">
 		<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
 	</section>
 
-	<!-- <section class="container" ng-controller="first">
-		<ul ng-repeat="marquee in marquees">
-			<li>{{marquee.contentkey}}</li>
-		</ul>
-	</section> -->
+	<section class="container" ng-controller="first">
+		
+			<h1>{{first.property1}}</h1>
+		
+	</section>
 
 	<section class="container col-md-12" id="controls">
 		<div class="row">
@@ -84,6 +84,8 @@
 				<textarea class="form-control" rows="3" placeholder="Body copy"></textarea><br />
 				<input type="text" class="form-control" placeholder="Button copy">
 			</form>
+
+			
 
 		</div>
 	</section>

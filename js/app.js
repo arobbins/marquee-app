@@ -1,7 +1,8 @@
-var mapp = angular.module('mapp', []);
+var app = angular.module('app', []);
 
 
 function first($scope){
+	$scope.property1 = "Prop1",
 	$scope.marquees = {
 		"Triple A": {
 			contentkey: "aaa612",
