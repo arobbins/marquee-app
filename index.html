@@ -10,25 +10,25 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header class="container col-md-12">
-		<h4><i class="fa fa-flask"></i> <strong>Marquee App</strong></h4>	
+	<header id="header" class="container-fluid">
+		<div class="row">
+			<h1 class="h4 col-lg-6"><i class="fa fa-flask"></i> <strong>Marquee App</strong></h1>
+			<form class="col-lg-6">
+				<input type="search" class="form-control pull-right" placeholder="Search">
+				<button type="button" class="btn btn-primary pull-right"><i class="fa fa-upload"></i> Upload</button> 
+			</form>
+		</div>
 	</header>
 
-	<section id="marquee">
+	<div id="marquee">
 		<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
-	</section>
+	</div>
 
-	<section class="container" ng-controller="first">
-		
-			<h1>{{first.property1}}</h1>
-		
-	</section>
-
-	<section class="container col-md-12" id="controls">
+	<section class="container-fluid">
 		<div class="row">
 
 			<!-- Templates -->
-			<div class="btn-group dropup col-xs-1">
+			<div class="btn-group dropup col-lg-1 col-md-2 col-xs-12">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					Templates <span class="caret"></span>
 				</button>
@@ -51,7 +51,7 @@
 			</div>
 
 			<!-- Theme -->
-			<div class="btn-group dropup col-xs-1">
+			<div class="btn-group dropup col-lg-1 col-md-1 col-xs-12">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					Themes <span class="caret"></span>
 				</button>
@@ -62,7 +62,7 @@
 			</div>
 
 			<!-- Button Icons -->
-			<div class="btn-group dropup col-xs-2">
+			<div class="btn-group dropup col-lg-1 col-md-1 col-xs-12">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					Button Icons <span class="caret"></span>
 				</button>
@@ -77,15 +77,13 @@
 					<li><a href="#">PFS</a></li>
 				</ul>
 			</div>
-
+			
 			<!-- Inputs -->
-			<form class="col-xs-6">
+			<form class="col-lg-6 col-md-7 col-xs-12">
 				<input type="text" class="form-control" placeholder="Header copy"><br />
 				<textarea class="form-control" rows="3" placeholder="Body copy"></textarea><br />
 				<input type="text" class="form-control" placeholder="Button copy">
 			</form>
-
-			
 
 		</div>
 	</section>

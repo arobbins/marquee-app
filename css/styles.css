@@ -1,15 +1,11 @@
 body {
-  min-width: 600px;
   max-width: 1440px;
   margin: 0 auto;
   position: relative; }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-width: 0;
-  vertical-align: middle; }
-
 #marquee {
   float: left;
   margin: 1em 0em; }
+
+#header {
+  margin: 1em 0em 0em 0em; }
