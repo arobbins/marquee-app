@@ -9,82 +9,112 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body ng-controller="m">
 	<header id="header" class="container-fluid">
 		<div class="row">
-			<h1 class="h4 col-lg-6"><i class="fa fa-flask"></i> <strong>Marquee App</strong></h1>
-			<form class="col-lg-6">
-				<input type="search" class="form-control pull-right" placeholder="Search">
-				<button type="button" class="btn btn-primary pull-right"><i class="fa fa-upload"></i> Upload</button> 
+			<h1 class="h4 col-lg-9"><i class="fa fa-flask"></i> <strong>Marquee App</strong></h1>
+			<form class="col-lg-3">
+				<input type="search" class="form-control pull-right" placeholder="Search"> 
 			</form>
 		</div>
 	</header>
 
-	<div id="marquee">
+	<div id="marquee" class="tpl-left">
 		<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
+		<div class="marquee-body">
+			<h1 class="hdr-small">{{header}}</h1>
+			<p>{{body}}</p>
+			<a href="#" class="button">{{button}}</a>
+		</div>
 	</div>
+
+	<!-- Navigation -->
+	<nav class="container-fluid" id="options">
+
+		<!-- Templates -->
+		<div class="btn-group dropup">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Templates <span class="caret"></span>
+			</button>
+
+			<ul class="dropdown-menu" role="menu">
+				<li role="presentation" class="dropdown-header">Generic Items</li>
+				<li><a href="#">Left</a></li>
+				<li><a href="#">Right</a></li>
+				<li><a href="#">Center</a></li>
+				<li><a href="#">Partner</a></li>
+				<li><a href="#">Routes</a></li>
+				<li><a href="#">Tiers</a></li>
+				<li><a href="#">Boardingbonus</a></li>
+				<li class="divider"></li>
+				<li role="presentation" class="dropdown-header">Promotions</li>
+				<li><a href="#">Left</a></li>
+				<li><a href="#">Right</a></li>
+				<li><a href="#">Center</a></li>
+			</ul>
+		</div>
+	
+		<!-- Theme -->
+		<div class="btn-group dropup">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Themes <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#">Light</a></li>
+				<li><a href="#">Dark</a></li>
+			</ul>
+		</div>
+
+		<!-- Button Icons -->
+		<div class="btn-group dropup">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Button Icons <span class="caret"></span>
+			</button>
+
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#">Retail</a></li>
+				<li><a href="#">Cars</a></li>
+				<li><a href="#">Travel</a></li>
+				<li><a href="#">Finance</a></li>
+				<li><a href="#">Hotels</a></li>
+				<li><a href="#">Train</a></li>
+				<li><a href="#">PFS</a></li>
+			</ul>
+		</div>
+
+		<!-- Header style -->
+		<div class="btn-group dropup">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Header style <span class="caret"></span>
+			</button>
+
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#">Option 1</a></li>
+				<li><a href="#">Option 2</a></li>
+				<li><a href="#">Option 3</a></li>
+				<li><a href="#">Option 4</a></li>
+				<li><a href="#">Option 5</a></li>
+				<li><a href="#">Option 6</a></li>
+				<li><a href="#">Option 7</a></li>
+			</ul>
+		</div>
+
+		<!-- Save -->
+		<button type="button" class="btn btn-default"><i class="fa fa-floppy-o"></i> Save</button>
+		
+		<!-- Upload -->
+		<button type="button" class="btn btn-primary pull-right"><i class="fa fa-upload"></i> Upload</button>
+
+	</nav>
 
 	<section class="container-fluid">
 		<div class="row">
-
-			<!-- Templates -->
-			<div class="btn-group dropup col-lg-1 col-md-2 col-xs-12">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					Templates <span class="caret"></span>
-				</button>
-
-				<ul class="dropdown-menu" role="menu">
-					<li role="presentation" class="dropdown-header">Generic Items</li>
-					<li><a href="#">Left</a></li>
-					<li><a href="#">Right</a></li>
-					<li><a href="#">Center</a></li>
-					<li><a href="#">Partner</a></li>
-					<li><a href="#">Routes</a></li>
-					<li><a href="#">Tiers</a></li>
-					<li><a href="#">Boardingbonus</a></li>
-					<li class="divider"></li>
-					<li role="presentation" class="dropdown-header">Promotions</li>
-					<li><a href="#">Left</a></li>
-					<li><a href="#">Right</a></li>
-					<li><a href="#">Center</a></li>
-				</ul>
-			</div>
-
-			<!-- Theme -->
-			<div class="btn-group dropup col-lg-1 col-md-1 col-xs-12">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					Themes <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Light</a></li>
-					<li><a href="#">Dark</a></li>
-				</ul>
-			</div>
-
-			<!-- Button Icons -->
-			<div class="btn-group dropup col-lg-1 col-md-1 col-xs-12">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					Button Icons <span class="caret"></span>
-				</button>
-
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Retail</a></li>
-					<li><a href="#">Cars</a></li>
-					<li><a href="#">Travel</a></li>
-					<li><a href="#">Finance</a></li>
-					<li><a href="#">Hotels</a></li>
-					<li><a href="#">Train</a></li>
-					<li><a href="#">PFS</a></li>
-				</ul>
-			</div>
-			
 			<!-- Inputs -->
-			<form class="col-lg-6 col-md-7 col-xs-12">
-				<input type="text" class="form-control" placeholder="Header copy"><br />
-				<textarea class="form-control" rows="3" placeholder="Body copy"></textarea><br />
-				<input type="text" class="form-control" placeholder="Button copy">
+			<form class="col-lg-8">
+				<input type="text" class="form-control" placeholder="Header copy" ng-model="header"><br />
+				<textarea class="form-control" rows="3" placeholder="Body copy" ng-model="body"></textarea><br />
+				<input type="text" class="form-control" placeholder="Button copy" ng-model="button">
 			</form>
-
 		</div>
 	</section>
 
