@@ -6,7 +6,7 @@ body {
 #marquee {
   color: white;
   float: left;
-  margin: 1em 0em;
+  margin: 0em 0em 1em 0em;
   position: relative; }
   #marquee .hdr-large {
     font-size: 5em;
@@ -50,13 +50,25 @@ body {
     text-shadow: 0 1px 1px #323232; }
 
 #header {
-  margin: 1em 0em 0em 0em; }
+  margin: 1em 0em 1em 0em; }
 
 #options {
   margin: 0em 0em 1em 0em; }
+
+#inputs {
+  margin: 0em 0em 5em 0em; }
 
 .tpl-left .marquee-body {
   position: absolute;
   top: 23%;
   left: 10%;
   width: 50%; }
+
+.panel-body {
+  padding: 0; }
+
+.panel-title > a {
+  width: 100%;
+  display: inline-block; }
+  .panel-title > a:hover {
+    text-decoration: none; }

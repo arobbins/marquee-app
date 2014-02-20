@@ -5,15 +5,13 @@ body{
 	margin: 0 auto;
 	position: relative;
 }
-
 header{
-	// background:#ffffff url('../imgs/logo.svg') no-repeat 25% 70%;
-	h1{}
+
 }
 #marquee{
 	color:white;
 	float:left;
-	margin:1em 0em;
+	margin:0em 0em 1em 0em;
 	position: relative;
 
 	.hdr-large{font-size:5em;line-height:100%;}
@@ -47,13 +45,15 @@ header{
 	}
 }
 #header{
-	margin:1em 0em 0em 0em;
+	margin:1em 0em 1em 0em;
 	// h1{font-size:1.3em;}
 }
 #options{
 	margin:0em 0em 1em 0em;
 }
-
+#inputs{
+	margin:0em 0em 5em 0em;
+}
 .tpl-left{
 	.marquee-body{
 		position:absolute;
@@ -61,4 +61,11 @@ header{
 		left: 10%;
 		width: 50%;
 	}
+}
+
+// Bootstrap overrides
+.panel-body{padding:0;}
+.panel-title>a{
+	width:100%;display:inline-block;
+	&:hover{text-decoration:none;}
 }
