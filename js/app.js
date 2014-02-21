@@ -1,10 +1,11 @@
 var app = angular.module('app', ['ui.bootstrap']);
 
-app.controller('m', ['$scope', function($scope) {
-	$scope.title = "Marquee #1";
-	$scope.template = "tpl-left";
-}]);
-
+function MarqueeCtrl($scope){
+	$scope.marquee = {
+		title : "Marquee #1",
+		template : "tpl-left"
+	};
+}
 
 function AccordionDemoCtrl($scope) {
   $scope.oneAtATime = true;

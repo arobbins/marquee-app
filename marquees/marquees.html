@@ -2,16 +2,16 @@
   <accordion close-others="oneAtATime">
     <accordion-group is-open="isopen">
         <accordion-heading>
-            {{title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+            {{marquee.title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
         </accordion-heading>
 
 			<!-- Marquee -->
-			<div id="marquee" class="{{template}}">
+			<div id="marquee" class="{{marquee.template}}">
 				<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
 				<div class="marquee-body">
-					<h1 class="hdr-small">{{m.header}}</h1>
-					<p>{{m.body}}</p>
-					<a href="#" class="button" ng-show="button">{{m.button}}</a>
+					<h1 class="hdr-small">{{marquee.header}}</h1>
+					<p>{{marquee.body}}</p>
+					<a href="#" class="button" ng-show="marquee.button">{{marquee.button}}</a>
 				</div>
 			</div>
 

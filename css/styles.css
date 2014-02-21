@@ -64,8 +64,14 @@ body {
   margin: 0em 0em 1em 0em;
 }
 #inputs {
-  margin: 1em 0em 5em 0em;
+  margin: 1em 0em 1em 1em;
   padding: 0;
+}
+#inputs form > * {
+  margin-bottom: 1em;
+}
+#inputs form input:last-child {
+  margin-bottom: 0em;
 }
 .tpl-left .marquee-body {
   position: absolute;
