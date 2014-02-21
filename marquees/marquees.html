@@ -1,0 +1,25 @@
+<div ng-controller="AccordionDemoCtrl">
+  <accordion close-others="oneAtATime">
+    <accordion-group is-open="isopen">
+        <accordion-heading>
+            {{title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+        </accordion-heading>
+
+			<!-- Marquee -->
+			<div id="marquee" class="{{template}}">
+				<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
+				<div class="marquee-body">
+					<h1 class="hdr-small">{{m.header}}</h1>
+					<p>{{m.body}}</p>
+					<a href="#" class="button" ng-show="button">{{m.button}}</a>
+				</div>
+			</div>
+
+			<!-- Options -->
+			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'"></nav>
+
+			<!-- Inputs -->
+			<section class="container-fluid" id="inputs" ng-include src="'marquees/inputs/inputs.html'"></section>
+    </accordion-group>
+  </accordion>
+</div>

@@ -2,26 +2,21 @@
 <html ng-app="app">
 	<head>
 		<title>Marquee App</title>
-		<!-- Bootstrap -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-		<!-- Font Awesome -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/styles.css">
+		<link rel="shortcut icon" href="../imgs/favicon.ico" />
 	</head>
 	<body ng-controller="m" ng-cloak>
-		<!-- Header -->
-		<header id="header" class="container-fluid" ng-include src="'views/header.html'"></header>
-		<!-- Marquees & Options -->
-		<div class="panel-group" id="accordion" ng-include src="'views/marquees.html'"></div>
 
-		<!-- Angular -->
+		<!-- Header -->
+		<header id="header" class="container-fluid" ng-include src="'header/header.html'"></header>
+
+		<!-- Marquees -->
+		<div class="panel-group" id="accordion" ng-include src="'marquees/marquees.html'"></div>
+
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
-		<!-- Bootstrap Jquery -->
-		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-		<!-- Custom JS -->
+		<script type="text/javascript" src="../js/ui-bootstrap-tpls-0.9.0.min.js"></script>
 		<script type="text/javascript" src="../js/app.js"></script>
 	</body>
 </html>

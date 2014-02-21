@@ -1,12 +1,9 @@
-@import 'variables';
+@import "variables.less";
 
 body{
 	max-width: 1440px;
 	margin: 0 auto;
 	position: relative;
-}
-header{
-
 }
 #marquee{
 	color:white;
@@ -52,7 +49,8 @@ header{
 	margin:0em 0em 1em 0em;
 }
 #inputs{
-	margin:0em 0em 5em 0em;
+	margin:1em 0em 5em 0em;
+	padding:0;
 }
 .tpl-left{
 	.marquee-body{
@@ -69,3 +67,4 @@ header{
 	width:100%;display:inline-block;
 	&:hover{text-decoration:none;}
 }
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
