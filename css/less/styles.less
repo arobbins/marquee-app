@@ -4,6 +4,7 @@ body{
 	max-width: 1440px;
 	margin: 0 auto;
 	position: relative;
+	font-family:@font-stack-body;
 }
 #marquee{
 	color:white;
@@ -43,7 +44,7 @@ body{
 }
 #header{
 	margin:1em 0em 1em 0em;
-	// h1{font-size:1.3em;}
+	h1{font-family:@font-stack-header;text-transform: uppercase;font-size: 1.3em;font-weight: 800;}
 }
 #options{
 	margin:0em 0em 1em 0em;
@@ -69,8 +70,13 @@ body{
 
 // Bootstrap overrides
 .panel-body{padding:0;}
+.panel-title{}
 .panel-title>a{
 	width:100%;display:inline-block;
 	&:hover{text-decoration:none;}
 }
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.search{
+	margin-right: 8em;
+}

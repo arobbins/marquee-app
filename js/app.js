@@ -1,12 +1,17 @@
-var app = angular.module('app', ['ui.bootstrap']);
+var app = angular.module('app', ['ui.bootstrap', 'xeditable']);
 
-function MarqueeCtrl($scope){
-	$scope.marquee = {
-		title : "Marquee #1",
-		template : "tpl-left"
-	};
-}
 
+
+
+app.controller('MarqueeCtrl', function($scope) {
+  $scope.marquee = {
+    title : "Marquee #1",
+    template : "tpl-left"
+  };
+});
+
+
+// Marquee Collpase controller
 function AccordionDemoCtrl($scope) {
   $scope.oneAtATime = true;
 
@@ -28,3 +33,9 @@ function AccordionDemoCtrl($scope) {
     $scope.items.push('Item ' + newItemNo);
   };
 }
+
+
+// Header buttons controller
+var ButtonsCtrl = function ($scope) {
+  $scope.radioModel = 'left';
+};

@@ -9,9 +9,9 @@
 			<div id="marquee" class="{{marquee.template}}">
 				<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
 				<div class="marquee-body">
-					<h1 class="hdr-small">{{marquee.header}}</h1>
-					<p>{{marquee.body}}</p>
-					<a href="#" class="button" ng-show="marquee.button">{{marquee.button}}</a>
+					<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header || "empty" }}</h1>
+					<p editable-text="marquee.body">{{ marquee.button || "empty" }}</p>
+					<a href="#" class="button" editable-text="marquee.button">{{ marquee.button || "empty" }}</a>
 				</div>
 			</div>
 
@@ -19,7 +19,7 @@
 			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'"></nav>
 
 			<!-- Inputs -->
-			<section class="container-fluid" id="inputs" ng-include src="'marquees/inputs/inputs.html'"></section>
+			<!-- <section class="container-fluid" id="inputs" ng-include src="'marquees/inputs/inputs.html'"></section> -->
     </accordion-group>
   </accordion>
 </div>

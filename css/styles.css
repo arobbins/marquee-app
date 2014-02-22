@@ -2,6 +2,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  font-family: arial, helvetica, sans-serif;
 }
 #marquee {
   color: white;
@@ -60,6 +61,12 @@ body {
 #header {
   margin: 1em 0em 1em 0em;
 }
+#header h1 {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 800;
+}
 #options {
   margin: 0em 0em 1em 0em;
 }
@@ -94,4 +101,7 @@ body {
 .carousel,
 .panel-title a {
   cursor: pointer;
+}
+.search {
+  margin-right: 8em;
 }
