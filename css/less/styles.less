@@ -1,15 +1,17 @@
 @import "variables.less";
+@import "mixins.less";
 
 body{
 	max-width: 1440px;
 	margin: 0 auto;
 	position: relative;
 	font-family:@font-stack-body;
+	// background: url("../imgs/snow.png") repeat;
 }
+
 #marquee{
 	color:white;
-	float:left;
-	margin:0em 0em 1em 0em;
+	margin:0;
 	position: relative;
 
 	.hdr-large{font-size:5em;line-height:100%;}
@@ -43,21 +45,16 @@ body{
 	}
 }
 #header{
-	margin:1em 0em 1em 0em;
-	h1{font-family:@font-stack-header;text-transform: uppercase;font-size: 1.3em;font-weight: 800;}
+	.MarginTopBottom;
+	h1{
+		font-family:@font-stack-header;
+		text-transform: uppercase;
+		font-size: 1.2em;
+		font-weight: 800;
+	}
 }
 #options{
-	margin:0em 0em 1em 0em;
-}
-#inputs{
-	margin:1em 0em 1em 1em;
-	padding:0;
-	form > *{
-		margin-bottom:1em;
-	}
-	form input:last-child{
-		margin-bottom:0em;
-	}
+	.MarginTopBottom;
 }
 .tpl-left{
 	.marquee-body{
@@ -79,4 +76,33 @@ body{
 
 .search{
 	margin-right: 8em;
+}
+
+
+//liveedit overrides
+.editable-wrap .editable-controls>input{
+	border: none;
+	background: none;
+}
+.editable-controls{
+	.editable-buttons{
+		display:none;
+	}
+}
+.editable-click, a.editable-click{color:inherit;}
+
+// Removing input forms on marquees from liveedit
+.marquee-body h1 + form{
+	font-size:3.1em;
+	margin-bottom:10px;
+}
+
+.marquee-body form *{
+	outline: none;
+}
+.marquee-body p + form{
+	margin-bottom:10px;
+}
+.theme-dark{
+	
 }

@@ -6,20 +6,18 @@
         </accordion-heading>
 
 			<!-- Marquee -->
-			<div id="marquee" class="{{marquee.template}}">
+			<div id="marquee" class="{{marquee.template}}" ng-class="theme">
 				<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
 				<div class="marquee-body">
-					<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header || "empty" }}</h1>
-					<p editable-text="marquee.body">{{ marquee.button || "empty" }}</p>
-					<a href="#" class="button" editable-text="marquee.button">{{ marquee.button || "empty" }}</a>
+					<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header || "Headline..." }}</h1>
+					<p editable-text="marquee.body">{{ marquee.body || "Body..." }}</p>
+					<a href="#" class="button" editable-text="marquee.button">{{ marquee.button || "Button..." }}</a>
 				</div>
 			</div>
 
 			<!-- Options -->
-			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'"></nav>
+			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'" ng-show="checkModel.editor"></nav>
 
-			<!-- Inputs -->
-			<!-- <section class="container-fluid" id="inputs" ng-include src="'marquees/inputs/inputs.html'"></section> -->
     </accordion-group>
   </accordion>
 </div>

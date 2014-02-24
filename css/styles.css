@@ -1,3 +1,6 @@
+.MarginTopBottom {
+  margin: 1em 0em;
+}
 body {
   max-width: 1440px;
   margin: 0 auto;
@@ -6,8 +9,7 @@ body {
 }
 #marquee {
   color: white;
-  float: left;
-  margin: 0em 0em 1em 0em;
+  margin: 0;
   position: relative;
 }
 #marquee .hdr-large {
@@ -59,26 +61,16 @@ body {
   text-shadow: 0 1px 1px #323232;
 }
 #header {
-  margin: 1em 0em 1em 0em;
+  margin: 1em 0em;
 }
 #header h1 {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 800;
 }
 #options {
-  margin: 0em 0em 1em 0em;
-}
-#inputs {
-  margin: 1em 0em 1em 1em;
-  padding: 0;
-}
-#inputs form > * {
-  margin-bottom: 1em;
-}
-#inputs form input:last-child {
-  margin-bottom: 0em;
+  margin: 1em 0em;
 }
 .tpl-left .marquee-body {
   position: absolute;
@@ -104,4 +96,25 @@ body {
 }
 .search {
   margin-right: 8em;
+}
+.editable-wrap .editable-controls > input {
+  border: none;
+  background: none;
+}
+.editable-controls .editable-buttons {
+  display: none;
+}
+.editable-click,
+a.editable-click {
+  color: inherit;
+}
+.marquee-body h1 + form {
+  font-size: 3.1em;
+  margin-bottom: 10px;
+}
+.marquee-body form * {
+  outline: none;
+}
+.marquee-body p + form {
+  margin-bottom: 10px;
 }

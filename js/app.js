@@ -1,13 +1,12 @@
 var app = angular.module('app', ['ui.bootstrap', 'xeditable']);
 
 
-
-
 app.controller('MarqueeCtrl', function($scope) {
   $scope.marquee = {
     title : "Marquee #1",
     template : "tpl-left"
   };
+  $scope.checkModel = {};
 });
 
 
@@ -33,9 +32,3 @@ function AccordionDemoCtrl($scope) {
     $scope.items.push('Item ' + newItemNo);
   };
 }
-
-
-// Header buttons controller
-var ButtonsCtrl = function ($scope) {
-  $scope.radioModel = 'left';
-};
