@@ -2,11 +2,38 @@ var app = angular.module('app', ['ui.bootstrap', 'xeditable']);
 
 
 app.controller('MarqueeCtrl', function($scope) {
-  $scope.marquee = {
-    title : "Marquee #1",
-    template : "tpl-left"
-  };
-  $scope.checkModel = {};
+	// $scope.marquee = {
+	// 	title : "Marquee #1",
+	// 	template : "tpl-left"
+	// };
+	$scope.checkModel = {};
+	$scope.marquees = [
+		{
+			title 	: 'Marquee #1',
+			template : 'tpl-left',
+			header 	: 'Headline',
+			body 		: 'Body',
+			button 	: 'Button'
+		}
+	];
+	$scope.addMarquee = function(){
+		var count = 0;
+		for(var i = 0; i <= $scope.marquees.length; i++){
+			count++;
+		}
+
+		$scope.marquees.unshift({
+			title 	: 'Marquee #' + count++,
+			template : 'tpl-left',
+			header 	: '',
+			body 		: '',
+			button 	: ''
+		});
+
+	};
+	$scope.removeMarquee = function(){
+		$scope.marquees.splice(0,1);
+	};
 });
 
 
@@ -31,4 +58,10 @@ function AccordionDemoCtrl($scope) {
     var newItemNo = $scope.items.length + 1;
     $scope.items.push('Item ' + newItemNo);
   };
+}
+
+
+
+function addMarquee() {
+
 }

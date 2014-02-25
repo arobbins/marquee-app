@@ -1,23 +1,23 @@
-<div ng-controller="AccordionDemoCtrl">
+<li ng-controller="AccordionDemoCtrl" ng-repeat="marquee in marquees" id="item">
   <accordion close-others="oneAtATime">
     <accordion-group is-open="isopen">
         <accordion-heading>
-            {{marquee.title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+            {{ marquee.title }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
         </accordion-heading>
 
 			<!-- Marquee -->
 			<div id="marquee" class="{{marquee.template}}" ng-class="theme">
 				<img src="imgs/marquee.jpeg" class="img-responsive" alt="" />
 				<div class="marquee-body">
-					<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header || "Headline..." }}</h1>
-					<p editable-text="marquee.body">{{ marquee.body || "Body..." }}</p>
-					<a href="#" class="button" editable-text="marquee.button">{{ marquee.button || "Button..." }}</a>
+					<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header || "Headline" }}</h1>
+					<p editable-text="marquee.body">{{ marquee.body || "Body" }}</p>
+					<a href="#" class="button" editable-text="marquee.button">{{ marquee.button || "Button" }}</a>
 				</div>
 			</div>
 
 			<!-- Options -->
 			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'" ng-show="checkModel.editor"></nav>
-
     </accordion-group>
   </accordion>
-</div>
+  <button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button>
+</li>

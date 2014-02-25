@@ -1,15 +1,16 @@
 <div class="row">
-	<h1 class="h4 col-lg-7"><i class="fa fa-flask"></i> Marquee App</h1>
-	<div class="col-lg-5 ng-scope pull-right">
-		<div class="btn-group pull-right">
-			<button type="button" class="btn btn-primary" ng-model="checkModel.editor" btn-checkbox>Editor</button>
-	    </div>
-	    <div class="input-group search">
-			<input type="search" results="5" class="form-control pull-right" placeholder=" Search...">
+	<h1 class="h4 col-lg-2"><i class="fa fa-flask"></i> Marquee App</h1>
+	<div class="col-lg-3"></div>
+	<div class="col-lg-7 ng-scope pull-right">
+  	 	<div class="input-group search pull-left">
+			<input type="search" results="5" class="form-control" placeholder=" Search...">
 			<span class="input-group-btn">
 				<button class="btn btn-default" type="button">Submit</button>
 			</span>
 		</div>
+		<div class="btn-group pull-right">
+			<button type="button" class="btn btn-default" ng-model="checkModel.editor" btn-checkbox><i class="fa fa-pencil"></i> Editor</button>
+			<button type="button" class="btn btn-default" ng-click="addMarquee()"><i class="fa fa-plus"></i> New</button>
+		</div>
 	</div>
 </div>
-

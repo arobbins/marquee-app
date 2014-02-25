@@ -95,7 +95,7 @@ body {
   cursor: pointer;
 }
 .search {
-  margin-right: 8em;
+  width: 81%;
 }
 .editable-wrap .editable-controls > input {
   border: none;
@@ -117,4 +117,15 @@ a.editable-click {
 }
 .marquee-body p + form {
   margin-bottom: 10px;
+}
+ul#accordion {
+  padding: 0;
+}
+#item {
+  position: relative;
+}
+#remove {
+  position: absolute;
+  top: 2%;
+  right: -4%;
 }
