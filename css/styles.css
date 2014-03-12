@@ -126,6 +126,6 @@ ul#accordion {
 }
 #remove {
   position: absolute;
-  top: 2%;
+  top: 0;
   right: -4%;
 }
