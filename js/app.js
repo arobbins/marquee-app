@@ -2,7 +2,8 @@ var app = angular.module('app', ['ui.bootstrap', 'xeditable']);
 
 app.controller('MarqueeCtrl', function($scope) {
 	$scope.checkModel = {};
-	// $scope.marqueeSearch = {};
+	$scope.marqueesSortedByRelease = [];
+	$scope.releaseDates = ['January 2014', 'February 2014', 'March 2014'];
 	$scope.marquees = [
 		{
 			contentkey	: 'aaa612',
@@ -11,7 +12,7 @@ app.controller('MarqueeCtrl', function($scope) {
 			body 			: 'Body',
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
-			release		: 'January2014'
+			release		: $scope.releaseDates[0]
 		},
 		{
 			contentkey 	: 'pfw0314',
@@ -20,7 +21,7 @@ app.controller('MarqueeCtrl', function($scope) {
 			body 			: 'Body',
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
-			release		: 'February2014'
+			release		: $scope.releaseDates[1]
 		},
 		{
 			contentkey 	: 'wyndham0314',
@@ -29,7 +30,16 @@ app.controller('MarqueeCtrl', function($scope) {
 			body 			: 'Body',
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
-			release		: 'March2014'
+			release		: $scope.releaseDates[1]
+		},
+		{
+			contentkey 	: 'testing1',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			release		: $scope.releaseDates[2]
 		},
 		{
 			contentkey 	: 'testing2',
@@ -38,18 +48,19 @@ app.controller('MarqueeCtrl', function($scope) {
 			body 			: 'Body',
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
-			release		: 'March2014'
+			release		: $scope.releaseDates[2]
 		},
 		{
-			contentkey 	: 'testing',
+			contentkey 	: 'testing3',
 			template 	: 'tpl-left',
 			header 		: 'Headline',
 			body 			: 'Body',
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
-			release		: 'February2014'
-		}
+			release		: $scope.releaseDates[2]
+		},
 	];
+
 	$scope.addMarquee = function(){
 		var count = 0;
 		for(var i = 0; i <= $scope.marquees.length; i++){
@@ -64,8 +75,13 @@ app.controller('MarqueeCtrl', function($scope) {
 			body 			: 'Body',
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg'
+
 		});
 	};
+
+	// var newIndex = $scope.releaseDates.length;
+	// alert(newIndex);
+
 	$scope.removeMarquee = function(){
 		$scope.marquees.splice(0,1);
 	};
@@ -78,6 +94,7 @@ app.controller('MarqueeCtrl', function($scope) {
 		   };
 		};
 	};
+
 });
 
 
