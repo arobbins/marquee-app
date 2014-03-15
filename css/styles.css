@@ -95,7 +95,8 @@ body {
   cursor: pointer;
 }
 .search {
-  width: 81%;
+  width: 60%;
+  margin-right: 1em;
 }
 .editable-wrap .editable-controls > input {
   border: none;

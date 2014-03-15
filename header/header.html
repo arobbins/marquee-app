@@ -1,10 +1,14 @@
 <div class="row">
 	<h1 class="h4 col-lg-2"><i class="fa fa-flask"></i> Marquee App</h1>
-	<div class="col-lg-3"></div>
-	<div class="col-lg-7 ng-scope pull-right">
-  	 	<div class="input-group search pull-left">
+	<div class="col-lg-1"></div>
+	<div class="col-lg-9 ng-scope pull-right">
+		<div class="btn-group pull-right">
+			<button type="button" class="btn btn-default" ng-model="checkModel.editor" btn-checkbox><i class="fa fa-plus"></i> New Release</button>
+			<button type="button" class="btn btn-default ng-class:disabled" ng-click="addMarquee()"><i class="fa fa-plus"></i> New Marquee</button>
+		</div>	
+  	 	<div class="input-group search pull-right">
 			<div class="input-group">
-				<input type="search" results="5" class="form-control" placeholder=" Search...">
+				<input type="search" results="10" class="form-control" placeholder=" Search...">
 				<div class="input-group-btn">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Releases <span class="caret"></span></button>
 					<ul class="dropdown-menu pull-right">
@@ -13,14 +17,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="btn-group pull-right">
-			<button type="button" class="btn btn-default" ng-model="checkModel.editor" btn-checkbox><i class="fa fa-pencil"></i> Editor</button>
-			<button type="button" class="btn btn-default" ng-click="addMarquee()"><i class="fa fa-plus"></i> New</button>
-		</div>
 	</div>
 </div>
 
 
-<ul>
+<!-- <ul>
   <li ng-repeat="marquee in marquees">{{ marquee.release }}</li>
-</ul>
+</ul> -->

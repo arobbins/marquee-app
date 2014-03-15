@@ -4,7 +4,17 @@ app.controller('MarqueeCtrl', function($scope) {
 	$scope.checkModel = {};
 	$scope.marqueesSortedByRelease = [];
 	$scope.releaseDates = ['January 2014', 'February 2014', 'March 2014'];
-	$scope.marquees = [
+
+	var onSearch = true;
+	var onRelease = false;
+
+	if(onSearch){
+		
+	} else if (onRelease){
+
+	}
+
+	var marquees = [
 		{
 			contentkey	: 'aaa612',
 			template 	: 'tpl-left',
@@ -60,13 +70,14 @@ app.controller('MarqueeCtrl', function($scope) {
 			release		: $scope.releaseDates[2]
 		},
 	];
+	$scope.marquees = marquees;
+
 
 	$scope.addMarquee = function(){
 		var count = 0;
 		for(var i = 0; i <= $scope.marquees.length; i++){
 			count++;
 		}
-
 		$scope.marquees.unshift({
 			contentkey 	: 'contentkey',
 			title 		: 'Marquee #' + count++,
@@ -75,24 +86,17 @@ app.controller('MarqueeCtrl', function($scope) {
 			body 			: 'Body',
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg'
-
 		});
 	};
-
-	// var newIndex = $scope.releaseDates.length;
-	// alert(newIndex);
 
 	$scope.removeMarquee = function(){
 		$scope.marquees.splice(0,1);
 	};
 
 	$scope.sortMarqueeByRelease = function(releaseDate){
-		var i = $scope.marquees.length - 1; // Totals up all the items in the array and subtracts 1 to compensate for 0 based index
-		for(i; i >= 0; i--) {
-		   if($scope.marquees[i].release != releaseDate){
-		   	$scope.marquees.splice(i, 1);
-		   };
-		};
+		$scope.marquees = marquees.filter(function(marquee) {
+			return marquee.release === releaseDate;
+		});
 	};
 
 });
