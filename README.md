@@ -1,3 +1,5 @@
-Grunt tasks included
-====================
-
+Grunt tasks
+- Less compiler
+- JavaScript minifying
+- JavaScript concatenation
+- Watch
