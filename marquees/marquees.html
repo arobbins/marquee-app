@@ -1,12 +1,12 @@
-<li ng-controller="AccordionDemoCtrl" ng-repeat="marquee in marquees" id="item">
-  <accordion close-others="oneAtATime">
-    <accordion-group is-open="isopen">
-        <accordion-heading>
-            {{ marquee.contentkey }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
-        </accordion-heading>
+<li ng-repeat="marquee in marquees | filter:findMarquees" id="item">
+	<accordion close-others="false">
+		<accordion-group is-open="marquee.toggled">
+			<accordion-heading>
+				{{ marquee.contentkey }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+			</accordion-heading>
 
 			<!-- Marquee -->
-			<div id="marquee" class="{{marquee.template}}" ng-class="theme">
+			<div id="marquee" class="{{ marquee.template }}" ng-class="theme">
 				<img src="{{ marquee.image }}" class="img-responsive" alt="" />
 				<div class="marquee-body">
 					<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header }}</h1>
@@ -14,11 +14,10 @@
 					<a href="#" class="button" editable-text="marquee.button">{{ marquee.button }}</a>
 				</div>
 			</div>
-			
 			<!-- Options -->
 			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'"></nav>
-			
-    </accordion-group>
-  </accordion>
-  <button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button>
+		</accordion-group>
+	</accordion>
+	<button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button>
+	{{ marquee.toggled }}
 </li>

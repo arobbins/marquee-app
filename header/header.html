@@ -3,12 +3,13 @@
 	<div class="col-lg-1"></div>
 	<div class="col-lg-9 ng-scope pull-right">
 		<div class="btn-group pull-right">
+			<button type="button" class="btn btn-default" ng-click="toggleMarquees()">Toggle</button>
 			<button type="button" class="btn btn-default" ng-model="checkModel.editor" btn-checkbox><i class="fa fa-plus"></i> New Release</button>
 			<button type="button" class="btn btn-default ng-class:disabled" ng-click="addMarquee()"><i class="fa fa-plus"></i> New Marquee</button>
-		</div>	
+		</div>
   	 	<div class="input-group search pull-right">
 			<div class="input-group">
-				<input type="search" results="10" class="form-control" placeholder=" Search...">
+				<input type="search" ng-model="findMarquees" results="20" class="form-control" placeholder=" Search...">
 				<div class="input-group-btn">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Releases <span class="caret"></span></button>
 					<ul class="dropdown-menu pull-right">
@@ -19,8 +20,4 @@
 		</div>
 	</div>
 </div>
-
-
-<!-- <ul>
-  <li ng-repeat="marquee in marquees">{{ marquee.release }}</li>
-</ul> -->
+{{ findMarquees }}

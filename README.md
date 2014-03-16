@@ -1,4 +1,3 @@
-Marquee-App
-===========
+Grunt tasks included
+====================
 
-Application for streamlining AGR Marquees
