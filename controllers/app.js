@@ -4,97 +4,24 @@ var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
 app.config(function($stateProvider, $urlRouterProvider) {
 	// $urlRouterProvider.otherwise('/');
 	$stateProvider
-	// .state('home', {
-	// 	url: "/",
-	// 	template: 'home'
-	// })
-	.state('release', {
-		url: "/{release}",
+	.state('home', {
+		url: "/",
+		template: 'home'
+	})
+	.state('marquees', {
+		url: "/marquees",
+		templateUrl: "../views/marquees/marquees.html"
+	})
+	.state('jan2014', {
+		url: "/jan2014",
 		templateUrl: "../views/marquees/marquees.html"
 	})
 });
 
 
-
-
-
-
-
-
-
-app.factory('People', function() {
-	var People = {};
-	People.info = [
-		{
-			name: "Lucilla Oquendo",
-			sex: "female"
-		},
-		{
-			name: "Clayton Bellini",
-			sex: "female"
-		},
-		{
-			name: "Vaughn Cammarata",
-			sex: "female"
-		},
-		{
-			name: "Valencia Briceno",
-			sex: "female"
-		},
-		{
-			name: "Colby Granato",
-			sex: "female"
-		},
-		{
-			name: "Shera Yelle",
-			sex: "female"
-		},
-		{
-			name: "Sheila Molnar",
-			sex: "female"
-		},
-		{
-			name: "Vinnie Watters",
-			sex: "male"
-		},
-		{
-			name: "Desmond Rathman",
-			sex: "male"
-		},
-		{
-			name: "Alaine Quevedo",
-			sex: "female"
-		},
-		{
-			name: "Hortense Beckford",
-			sex: "female"
-		},
-		{
-			name: "Gaylene Bennefield",
-			sex: "male"
-		}
-	];
-	return People;
-})
-
-
-function PeopleCtrl($scope, People){
-	$scope.people = People;
-}
-
-
-
-
-
-
-
-
-
-
-
 app.controller('MarqueeCtrl', function($scope, $stateParams) {
 
-	$scope.releaseDates = ['January 2014', 'February 2014', 'March 2014'];
+	$scope.releaseDates = ['March 2014', 'February 2014', 'January 2014', 'December 2013'];
 
 	// Main marquees array
 	var marquees = [
@@ -129,7 +56,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			release		: $scope.releaseDates[1]
 		},
 		{
-			contentkey 	: 'testing1',
+			contentkey 	: 'vinesse1013',
 			template 	: 'tpl-left',
 			header 		: 'Headline',
 			body 			: 'Body',
@@ -139,7 +66,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			release		: $scope.releaseDates[2]
 		},
 		{
-			contentkey	: 'testing2',
+			contentkey	: 'ssolinkaccounts1211',
 			template		: 'tpl-left',
 			header 		: 'Headline',
 			body 			: 'Body',
@@ -149,7 +76,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			release 		: $scope.releaseDates[2]
 		},
 		{
-			contentkey 	: 'testing3',
+			contentkey 	: 'select0213',
 			template 	: 'tpl-left',
 			header 		: 'Headline',
 			body 			: 'Body',
@@ -157,6 +84,106 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
 			release		: $scope.releaseDates[2]
+		},
+		{
+			contentkey	: 'acelareactfall2012',
+			template		: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[3]
+		},
+		{
+			contentkey 	: 'amtrakbookingfall2012',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[0]
+		},
+		{
+			contentkey 	: 'amtrakbrand0713',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[3]
+		},
+		{
+			contentkey 	: 'facebook1112',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[1]
+		},
+		{
+			contentkey	: 'hyatt0913',
+			template		: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release 		: $scope.releaseDates[2]
+		},
+		{
+			contentkey 	: 'metlife0913',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[3]
+		},
+		{
+			contentkey 	: 'partneroi1113',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[0]
+		},
+		{
+			contentkey 	: 'energyplus1213',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[2]
+		},
+		{
+			contentkey 	: 'budgetJan2014',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[0]
+		},
+		{
+			contentkey 	: 'pfw1013',
+			template 	: 'tpl-left',
+			header 		: 'Headline',
+			body 			: 'Body',
+			button 		: 'Button',
+			image 		: '../imgs/marquee.jpeg',
+			toggled		: false,
+			release		: $scope.releaseDates[3]
 		}
 	];
 

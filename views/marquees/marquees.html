@@ -1,22 +1,24 @@
-<li ng-repeat="marquee in marquees | filter:form.search" id="item">
-	<accordion close-others="false">
-		<accordion-group is-open="marquee.toggled">
-			<accordion-heading>
-				{{ marquee.contentkey }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': marquee.toggled, 'glyphicon-chevron-right': !marquee.toggled}"></i>
-			</accordion-heading>
+<ul class="panel-group" id="accordion">
+	<li ng-repeat="marquee in marquees | filter:form.search" id="item">
+		<accordion close-others="false">
+			<accordion-group is-open="marquee.toggled">
+				<accordion-heading>
+					{{ marquee.contentkey }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': marquee.toggled, 'glyphicon-chevron-right': !marquee.toggled}"></i>
+				</accordion-heading>
 
-			<!-- Marquee -->
-			<div id="marquee" class="{{ marquee.template }}" ng-class="theme">
-				<img src="{{ marquee.image }}" class="img-responsive" alt="" />
-				<div class="marquee-body">
-					<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header }}</h1>
-					<p editable-text="marquee.body">{{ marquee.body }}</p>
-					<a href="#" class="button" editable-text="marquee.button">{{ marquee.button }}</a>
+				<!-- Marquee -->
+				<div id="marquee" class="{{ marquee.template }}" ng-class="theme">
+					<img src="{{ marquee.image }}" class="img-responsive" alt="" />
+					<div class="marquee-body">
+						<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header }}</h1>
+						<p editable-text="marquee.body">{{ marquee.body }}</p>
+						<a href="#" class="button" editable-text="marquee.button">{{ marquee.button }}</a>
+					</div>
 				</div>
-			</div>
-			<!-- Options -->
-			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'"></nav>
-		</accordion-group>
-	</accordion>
-	<!-- <button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button> -->
-</li>
+				<!-- Options -->
+				<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'"></nav>
+			</accordion-group>
+		</accordion>
+		<!-- <button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button> -->
+	</li>
+</ul>
