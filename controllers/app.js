@@ -2,18 +2,10 @@
 var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-	// $urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/');
 	$stateProvider
-	.state('home', {
-		url: "/",
-		template: 'home'
-	})
 	.state('marquees', {
 		url: "/marquees",
-		templateUrl: "../views/marquees/marquees.html"
-	})
-	.state('jan2014', {
-		url: "/jan2014",
 		templateUrl: "../views/marquees/marquees.html"
 	})
 });
