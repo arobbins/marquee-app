@@ -32,8 +32,16 @@ module.exports = function(grunt) {
 				dest: "js/app.min.js",
 				src: [
 					"js/libs/ui-bootstrap-tpls-0.10.0.min.js",
+					"js/libs/angular-ui-router.min.js",
 					"js/libs/xeditable.min.js",
 					"js/app.min.js"
+				]
+			},
+			css: {
+				dest: "css/styles.css",
+				src: [
+					"css/xeditable.css",
+					"css/styles.css"
 				]
 			}
 		},

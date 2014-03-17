@@ -2,7 +2,7 @@
 	<accordion close-others="false">
 		<accordion-group is-open="marquee.toggled">
 			<accordion-heading>
-				{{ marquee.contentkey }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+				{{ marquee.contentkey }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': marquee.toggled, 'glyphicon-chevron-right': !marquee.toggled}"></i>
 			</accordion-heading>
 
 			<!-- Marquee -->
@@ -19,5 +19,4 @@
 		</accordion-group>
 	</accordion>
 	<button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button>
-	{{ marquee.toggled }}
 </li>

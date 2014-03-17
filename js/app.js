@@ -1,4 +1,11 @@
-var app = angular.module('app', ['ui.bootstrap', 'xeditable']);
+var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
+
+app.config(function($stateProvider) {
+	$stateProvider.state('test', {
+		url: "/test",
+		templateUrl: '../marquees/test.html'
+	})
+});
 
 app.controller('MarqueeCtrl', function($scope) {
 
@@ -98,6 +105,7 @@ app.controller('MarqueeCtrl', function($scope) {
 		$scope.marquees = marquees.filter(function(marquee) {
 			return marquee.release === releaseDate;
 		});
+
 	};
 
 	// Collapse and expand
@@ -106,5 +114,6 @@ app.controller('MarqueeCtrl', function($scope) {
 			return marquee.toggled = !marquee.toggled;
 		});
 	};
+
 
 });
