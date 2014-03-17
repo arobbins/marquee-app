@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 			},
 			js: {
 				dest: "js/app.min.js",
-				src: "js/app.js"
+				src: "controllers/app.js"
 			}
 		},
 		// Combining all JavaScript
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 		// Watching files and folders for changes
 		watch: {
 			app: {
-				files: ['css/less/*.less', 'js/*.js'],
+				files: ['css/less/*.less', 'controllers/*.js', 'js/*.js'],
 				tasks: ['less', 'uglify', 'concat'],
 				options: {
 					spawn: false

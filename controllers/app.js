@@ -1,13 +1,98 @@
+/* Main Controller */
 var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
 
-app.config(function($stateProvider) {
-	$stateProvider.state('test', {
-		url: "/test",
-		templateUrl: '../marquees/test.html'
+app.config(function($stateProvider, $urlRouterProvider) {
+	// $urlRouterProvider.otherwise('/');
+	$stateProvider
+	// .state('home', {
+	// 	url: "/",
+	// 	template: 'home'
+	// })
+	.state('release', {
+		url: "/{release}",
+		templateUrl: "../views/marquees/marquees.html"
 	})
 });
 
-app.controller('MarqueeCtrl', function($scope) {
+
+
+
+
+
+
+
+
+app.factory('People', function() {
+	var People = {};
+	People.info = [
+		{
+			name: "Lucilla Oquendo",
+			sex: "female"
+		},
+		{
+			name: "Clayton Bellini",
+			sex: "female"
+		},
+		{
+			name: "Vaughn Cammarata",
+			sex: "female"
+		},
+		{
+			name: "Valencia Briceno",
+			sex: "female"
+		},
+		{
+			name: "Colby Granato",
+			sex: "female"
+		},
+		{
+			name: "Shera Yelle",
+			sex: "female"
+		},
+		{
+			name: "Sheila Molnar",
+			sex: "female"
+		},
+		{
+			name: "Vinnie Watters",
+			sex: "male"
+		},
+		{
+			name: "Desmond Rathman",
+			sex: "male"
+		},
+		{
+			name: "Alaine Quevedo",
+			sex: "female"
+		},
+		{
+			name: "Hortense Beckford",
+			sex: "female"
+		},
+		{
+			name: "Gaylene Bennefield",
+			sex: "male"
+		}
+	];
+	return People;
+})
+
+
+function PeopleCtrl($scope, People){
+	$scope.people = People;
+}
+
+
+
+
+
+
+
+
+
+
+
+app.controller('MarqueeCtrl', function($scope, $stateParams) {
 
 	$scope.releaseDates = ['January 2014', 'February 2014', 'March 2014'];
 
@@ -76,6 +161,7 @@ app.controller('MarqueeCtrl', function($scope) {
 	];
 
 	$scope.marquees = marquees;
+	$scope.form = {};
 
 	// Add marquee to release
 	$scope.addMarquee = function(){
@@ -105,7 +191,6 @@ app.controller('MarqueeCtrl', function($scope) {
 		$scope.marquees = marquees.filter(function(marquee) {
 			return marquee.release === releaseDate;
 		});
-
 	};
 
 	// Collapse and expand
@@ -115,5 +200,5 @@ app.controller('MarqueeCtrl', function($scope) {
 		});
 	};
 
-
 });
+

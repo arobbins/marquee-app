@@ -10,13 +10,9 @@
 	</head>
 	<body ng-controller="MarqueeCtrl" ng-cloak>
 		<!-- Header -->
-		<header id="header" class="container-fluid" ng-include src="'header/header.html'"></header>
-		<!-- Marquees -->
-		<ul class="panel-group" id="accordion" ng-include src="'marquees/marquees.html'"></ul>
-
-
-		<section ui-view></section>
-
+		<header id="header" class="container-fluid" ng-include src="'views/header.html'"></header>
+		
+		<ul class="panel-group" id="accordion" ng-include src="'views/marquees/marquees.html'"></ul>
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 		<script type="text/javascript" src="js/app.min.js"></script>

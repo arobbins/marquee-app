@@ -1,4 +1,4 @@
-<li ng-repeat="marquee in marquees | filter:findMarquees" id="item">
+<li ng-repeat="marquee in marquees | filter:form.search" id="item">
 	<accordion close-others="false">
 		<accordion-group is-open="marquee.toggled">
 			<accordion-heading>
@@ -18,5 +18,5 @@
 			<nav class="container-fluid" id="options" ng-include src="'marquees/options/options.html'"></nav>
 		</accordion-group>
 	</accordion>
-	<button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button>
+	<!-- <button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button> -->
 </li>
