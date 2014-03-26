@@ -4,17 +4,32 @@ var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
 	$stateProvider
-	.state('marquees', {
-		url: "/marquees",
-		templateUrl: "../views/marquees/marquees.html"
-	})
+		// .state('home', {
+		// 	url: "/",
+		// 	templateUrl: "../views/feature.html"
+		// })
+		.state('marquees', {
+			url: "/marquees",
+			templateUrl: "../views/marquees/marquees.html"
+		})
 });
 
+app.directive('release', function(){
+	return {
+		restrict: 'A',
+		scope: {
+			marquee: '='
+		},
+		templateUrl: '../views/directive1.html',
+		controller: function($scope){
+			console.log($scope.marquee);
+		}
+	};
+})
 
 app.controller('MarqueeCtrl', function($scope, $stateParams) {
 
-	$scope.releaseDates = ['March 2014', 'February 2014', 'January 2014', 'December 2013'];
-
+	var releaseDates = ['March 2014', 'February 2014', 'January 2014', 'December 2013'];
 	// Main marquees array
 	var marquees = [
 		{
@@ -25,7 +40,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[0]
+			release		: releaseDates[0]
 		},
 		{
 			contentkey 	: 'pfw0314',
@@ -35,7 +50,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[1]
+			release		: releaseDates[1]
 		},
 		{
 			contentkey 	: 'wyndham0314',
@@ -45,7 +60,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[1]
+			release		: releaseDates[1]
 		},
 		{
 			contentkey 	: 'vinesse1013',
@@ -55,7 +70,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[2]
+			release		: releaseDates[2]
 		},
 		{
 			contentkey	: 'ssolinkaccounts1211',
@@ -65,7 +80,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release 		: $scope.releaseDates[2]
+			release 		: releaseDates[2]
 		},
 		{
 			contentkey 	: 'select0213',
@@ -75,7 +90,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[2]
+			release		: releaseDates[2]
 		},
 		{
 			contentkey	: 'acelareactfall2012',
@@ -85,7 +100,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[3]
+			release		: releaseDates[3]
 		},
 		{
 			contentkey 	: 'amtrakbookingfall2012',
@@ -95,7 +110,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[0]
+			release		: releaseDates[0]
 		},
 		{
 			contentkey 	: 'amtrakbrand0713',
@@ -105,7 +120,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[3]
+			release		: releaseDates[3]
 		},
 		{
 			contentkey 	: 'facebook1112',
@@ -115,7 +130,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[1]
+			release		: releaseDates[1]
 		},
 		{
 			contentkey	: 'hyatt0913',
@@ -125,7 +140,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release 		: $scope.releaseDates[2]
+			release 		: releaseDates[2]
 		},
 		{
 			contentkey 	: 'metlife0913',
@@ -135,7 +150,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[3]
+			release		: releaseDates[3]
 		},
 		{
 			contentkey 	: 'partneroi1113',
@@ -145,7 +160,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[0]
+			release		: releaseDates[0]
 		},
 		{
 			contentkey 	: 'energyplus1213',
@@ -155,7 +170,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[2]
+			release		: releaseDates[2]
 		},
 		{
 			contentkey 	: 'budgetJan2014',
@@ -165,7 +180,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[0]
+			release		: releaseDates[0]
 		},
 		{
 			contentkey 	: 'pfw1013',
@@ -175,12 +190,12 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 			button 		: 'Button',
 			image 		: '../imgs/marquee.jpeg',
 			toggled		: false,
-			release		: $scope.releaseDates[3]
+			release		: releaseDates[3]
 		}
 	];
 
 	$scope.marquees = marquees;
-	$scope.form = {};
+	$scope.releaseDates = releaseDates;
 
 	// Add marquee to release
 	$scope.addMarquee = function(){
@@ -207,6 +222,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 
 	// Sortable by release
 	$scope.sortMarqueeByRelease = function(releaseDate){
+
 		$scope.marquees = marquees.filter(function(marquee) {
 			return marquee.release === releaseDate;
 		});
@@ -220,4 +236,7 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 	};
 
 });
+
+
+
 
