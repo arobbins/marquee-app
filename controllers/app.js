@@ -4,195 +4,186 @@ var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
 	$stateProvider
-		// .state('home', {
-		// 	url: "/",
-		// 	templateUrl: "../views/feature.html"
-		// })
-		.state('marquees', {
-			url: "/marquees",
-			templateUrl: "../views/marquees/marquees.html"
+		.state('home', {
+			url: "/#/",
+			templateUrl: "../views/feature.html"
+		})
+		.state('releases', {
+			url: "/marquees/{releaseDate}",
+			templateUrl: "../views/marquees/marquees.html",
+			controller: function($scope, $stateParams){
+				$scope.filterMarquees($stateParams.releaseDate);
+			}
 		})
 });
 
-app.directive('release', function(){
-	return {
-		restrict: 'A',
-		scope: {
-			marquee: '='
-		},
-		templateUrl: '../views/directive1.html',
-		controller: function($scope){
-			console.log($scope.marquee);
-		}
-	};
-})
+
+var releaseDates = ['March-2014', 'February-2014', 'January-2014', 'December-2013'];
+var marquees = [
+	{
+		contentkey	: 'aaa612',
+		template		: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[0]
+	},
+	{
+		contentkey 	: 'pfw0314',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[1]
+	},
+	{
+		contentkey 	: 'wyndham0314',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[1]
+	},
+	{
+		contentkey 	: 'vinesse1013',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[2]
+	},
+	{
+		contentkey	: 'ssolinkaccounts1211',
+		template		: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release 		: releaseDates[2]
+	},
+	{
+		contentkey 	: 'select0213',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[2]
+	},
+	{
+		contentkey	: 'acelareactfall2012',
+		template		: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[3]
+	},
+	{
+		contentkey 	: 'amtrakbookingfall2012',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[0]
+	},
+	{
+		contentkey 	: 'amtrakbrand0713',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[3]
+	},
+	{
+		contentkey 	: 'facebook1112',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[1]
+	},
+	{
+		contentkey	: 'hyatt0913',
+		template		: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release 		: releaseDates[2]
+	},
+	{
+		contentkey 	: 'metlife0913',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[3]
+	},
+	{
+		contentkey 	: 'partneroi1113',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[0]
+	},
+	{
+		contentkey 	: 'energyplus1213',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[2]
+	},
+	{
+		contentkey 	: 'budgetJan2014',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[0]
+	},
+	{
+		contentkey 	: 'pfw1013',
+		template 	: 'tpl-left',
+		header 		: 'Headline',
+		body 			: 'Body',
+		button 		: 'Button',
+		image 		: '../imgs/marquee.jpeg',
+		toggled		: false,
+		release		: releaseDates[3]
+	}
+];
+
 
 app.controller('MarqueeCtrl', function($scope, $stateParams) {
-
-	var releaseDates = ['March 2014', 'February 2014', 'January 2014', 'December 2013'];
-	// Main marquees array
-	var marquees = [
-		{
-			contentkey	: 'aaa612',
-			template		: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[0]
-		},
-		{
-			contentkey 	: 'pfw0314',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[1]
-		},
-		{
-			contentkey 	: 'wyndham0314',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[1]
-		},
-		{
-			contentkey 	: 'vinesse1013',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[2]
-		},
-		{
-			contentkey	: 'ssolinkaccounts1211',
-			template		: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release 		: releaseDates[2]
-		},
-		{
-			contentkey 	: 'select0213',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[2]
-		},
-		{
-			contentkey	: 'acelareactfall2012',
-			template		: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[3]
-		},
-		{
-			contentkey 	: 'amtrakbookingfall2012',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[0]
-		},
-		{
-			contentkey 	: 'amtrakbrand0713',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[3]
-		},
-		{
-			contentkey 	: 'facebook1112',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[1]
-		},
-		{
-			contentkey	: 'hyatt0913',
-			template		: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release 		: releaseDates[2]
-		},
-		{
-			contentkey 	: 'metlife0913',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[3]
-		},
-		{
-			contentkey 	: 'partneroi1113',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[0]
-		},
-		{
-			contentkey 	: 'energyplus1213',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[2]
-		},
-		{
-			contentkey 	: 'budgetJan2014',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[0]
-		},
-		{
-			contentkey 	: 'pfw1013',
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			image 		: '../imgs/marquee.jpeg',
-			toggled		: false,
-			release		: releaseDates[3]
-		}
-	];
 
 	$scope.marquees = marquees;
 	$scope.releaseDates = releaseDates;
@@ -220,21 +211,18 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 		$scope.marquees.splice(0,1);
 	};
 
-	// Sortable by release
-	$scope.sortMarqueeByRelease = function(releaseDate){
-
-		$scope.marquees = marquees.filter(function(marquee) {
-			return marquee.release === releaseDate;
-		});
-	};
-
 	// Collapse and expand
 	$scope.toggleMarquees = function(){
 		$scope.marquees.forEach(function(marquee) {
 			return marquee.toggled = !marquee.toggled;
 		});
-	};
+	};	
 
+	$scope.filterMarquees = function(releaseDate){
+		$scope.marquees = marquees.filter(function(marquee) {
+			return marquee.release === releaseDate;
+		});
+	}
 });
 
 

@@ -15,7 +15,7 @@
 				<div class="input-group-btn">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Releases <span class="caret"></span></button>
 					<ul class="dropdown-menu pull-right">
-						<li ng-repeat="releaseDate in releaseDates"><a ng-click="sortMarqueeByRelease(releaseDate)">{{ releaseDate }}</a></li>
+						<li ng-repeat="releaseDate in releaseDates"><a ui-sref="releases({releaseDate:releaseDate})" ng-click="sortMarqueeByRelease(releaseDate)">{{ releaseDate }}</a></li>
 					</ul>
 				</div>
 			</div>
