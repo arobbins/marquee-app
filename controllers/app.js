@@ -1,210 +1,67 @@
 /* Main Controller */
 var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/');
-	$stateProvider
-		.state('home', {
-			url: "/#/",
-			templateUrl: "../views/feature.html"
-		})
-		.state('releases', {
-			url: "/marquees/{releaseDate}",
-			templateUrl: "../views/marquees/marquees.html",
-			controller: function($scope, $stateParams){
-				$scope.filterMarquees($stateParams.releaseDate);
-			}
-		})
+// app.config(function($stateProvider, $urlRouterProvider) {
+// 	$urlRouterProvider.otherwise('/');
+// 	$stateProvider
+// 	.state('releases', {
+// 		url: "/{release}",
+// 		templateUrl: "../views/marquees/marquees.html",
+// 		controller: function($scope, $stateParams, marquees, releases){
+// 			$scope.filterMarquees($stateParams.release);
+// 		}
+// 	})
+// });
+
+app.factory('marquees', function($http) {
+	return {
+		getMarquees: function(callback) {
+			$http.get('../js/marquees.json').success(callback);
+		}
+	};
+});
+
+app.factory('releases', function($http) {
+	return {
+		getReleases: function(callback) {
+			$http.get('../js/releases.json').success(callback);
+		}
+	};
 });
 
 
-var releaseDates = ['March-2014', 'February-2014', 'January-2014', 'December-2013'];
-var marquees = [
-	{
-		contentkey	: 'aaa612',
-		template		: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[0]
-	},
-	{
-		contentkey 	: 'pfw0314',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[1]
-	},
-	{
-		contentkey 	: 'wyndham0314',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[1]
-	},
-	{
-		contentkey 	: 'vinesse1013',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[2]
-	},
-	{
-		contentkey	: 'ssolinkaccounts1211',
-		template		: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release 		: releaseDates[2]
-	},
-	{
-		contentkey 	: 'select0213',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[2]
-	},
-	{
-		contentkey	: 'acelareactfall2012',
-		template		: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[3]
-	},
-	{
-		contentkey 	: 'amtrakbookingfall2012',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[0]
-	},
-	{
-		contentkey 	: 'amtrakbrand0713',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[3]
-	},
-	{
-		contentkey 	: 'facebook1112',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[1]
-	},
-	{
-		contentkey	: 'hyatt0913',
-		template		: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release 		: releaseDates[2]
-	},
-	{
-		contentkey 	: 'metlife0913',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[3]
-	},
-	{
-		contentkey 	: 'partneroi1113',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[0]
-	},
-	{
-		contentkey 	: 'energyplus1213',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[2]
-	},
-	{
-		contentkey 	: 'budgetJan2014',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[0]
-	},
-	{
-		contentkey 	: 'pfw1013',
-		template 	: 'tpl-left',
-		header 		: 'Headline',
-		body 			: 'Body',
-		button 		: 'Button',
-		image 		: '../imgs/marquee.jpeg',
-		toggled		: false,
-		release		: releaseDates[3]
-	}
-];
+app.controller('MarqueeCtrl', function($scope, marquees, releases) {
 
+	// $scope.marquees = marquees;
+	// $scope.releases = releases;
 
-app.controller('MarqueeCtrl', function($scope, $stateParams) {
+	marquees.getMarquees(function(results) {
+		return $scope.marquees = results;
+	});
+	
+	releases.getReleases(function(results) {
+		return $scope.releases = results;
+	});
 
-	$scope.marquees = marquees;
-	$scope.releaseDates = releaseDates;
+	// console.log();
 
 	// Add marquee to release
-	$scope.addMarquee = function(){
-		var count = 0;
-		for(var i = 0; i <= $scope.marquees.length; i++){
-			count++;
-		}
-		$scope.marquees.unshift({
-			contentkey 	: 'contentkey',
-			title 		: 'Marquee #' + count++,
-			template 	: 'tpl-left',
-			header 		: 'Headline',
-			body 			: 'Body',
-			button 		: 'Button',
-			toggled		: false,
-			image 		: '../imgs/marquee.jpeg'
-		});
-	};
+	// $scope.addMarquee = function(){
+	// 	var count = 0;
+	// 	for(var i = 0; i <= $scope.marquees.length; i++){
+	// 		count++;
+	// 	}
+	// 	$scope.marquees.unshift({
+	// 		contentkey 	: 'contentkey',
+	// 		title 		: 'Marquee #' + count++,
+	// 		template 	: 'tpl-left',
+	// 		header 		: 'Headline',
+	// 		body 			: 'Body',
+	// 		button 		: 'Button',
+	// 		toggled		: false,
+	// 		image 		: '../imgs/marquee.jpeg'
+	// 	});
+	// };
 
 	// Remove marquee from release
 	$scope.removeMarquee = function(){
@@ -219,10 +76,13 @@ app.controller('MarqueeCtrl', function($scope, $stateParams) {
 	};	
 
 	$scope.filterMarquees = function(releaseDate){
-		$scope.marquees = marquees.filter(function(marquee) {
-			return marquee.release === releaseDate;
+		$scope.marquees.filter(function(marquee) {
+			marquee.release === releaseDate;
 		});
-	}
+
+		// console.log($scope.marquees);
+	};
+
 });
 
 

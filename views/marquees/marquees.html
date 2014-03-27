@@ -1,5 +1,5 @@
 <ul class="panel-group" id="accordion">
-	<li ng-repeat="marquee in marquees | filter:form.search" id="item">
+	<li ng-repeat="marquee in marquees" id="item">
 		<accordion close-others="false">
 			<accordion-group is-open="marquee.toggled">
 				<accordion-heading>
@@ -15,8 +15,10 @@
 						<a href="#" class="button" editable-text="marquee.button">{{ marquee.button }}</a>
 					</div>
 				</div>
+
 				<!-- Options -->
 				<nav class="container-fluid" id="options" ng-include src="'views/marquees/options.html'"></nav>
+				
 			</accordion-group>
 		</accordion>
 		<!-- <button type="button" class="btn btn-danger pull-right" ng-click="removeMarquee()" id="remove" ng-class="'glyphicon glyphicon-remove'"></button> -->
