@@ -36,11 +36,11 @@ app.controller('MarqueeCtrl', function($scope, marquees, releases) {
 	// $scope.releases = releases;
 
 	marquees.getMarquees(function(results) {
-		return $scope.marquees = results;
+		$scope.marquees = results;
 	});
-	
+
 	releases.getReleases(function(results) {
-		return $scope.releases = results;
+		$scope.releases = results;
 	});
 
 	// console.log();
@@ -73,14 +73,13 @@ app.controller('MarqueeCtrl', function($scope, marquees, releases) {
 		$scope.marquees.forEach(function(marquee) {
 			return marquee.toggled = !marquee.toggled;
 		});
-	};	
+	};
 
 	$scope.filterMarquees = function(releaseDate){
 		$scope.marquees.filter(function(marquee) {
-			marquee.release === releaseDate;
+			console.log(marquee.release === releaseDate);
 		});
 
-		// console.log($scope.marquees);
 	};
 
 });
