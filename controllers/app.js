@@ -30,18 +30,11 @@ app.factory('marqueeData', function($http) {
 	};
 });
 
-var marquees;
-
 app.controller('MarqueeCtrl', function($scope, marqueeData) {
-
-	marqueeData.getMarquees(function(results) {
-		return marquees = results;
-	});
 
 	marqueeData.getReleases(function(results) {
 		return $scope.releases = results;
 	});
-
 
 	// Add marquee to release
 	// $scope.addMarquee = function(){
@@ -74,9 +67,11 @@ app.controller('MarqueeCtrl', function($scope, marqueeData) {
 	};
 
 	$scope.filterMarquees = function(releaseDate){
-		$scope.marquees = marquees.filter(function(marquee) {
-			return marquee.release === releaseDate;
-		});
+		marqueeData.getMarquees(function(results) {
+			$scope.marquees = results.filter(function(marquee) {
+				return marquee.release === releaseDate;
+			});
+		});		
 	};
 
 });
