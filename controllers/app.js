@@ -1,49 +1,47 @@
 /* Main Controller */
 var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
 
-// app.config(function($stateProvider, $urlRouterProvider) {
-// 	$urlRouterProvider.otherwise('/');
-// 	$stateProvider
-// 	.state('releases', {
-// 		url: "/{release}",
-// 		templateUrl: "../views/marquees/marquees.html",
-// 		controller: function($scope, $stateParams, marquees, releases){
-// 			$scope.filterMarquees($stateParams.release);
-// 		}
-// 	})
-// });
+app.config(function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise('/');
+	$stateProvider
+	.state('releases', {
+		url: "/{release}",
+		templateUrl: "../views/marquees/marquees.html",
+		controller: function($scope, $stateParams, marqueeData){
+			marqueeData.getMarquees(function(results) {
+				return marquees = results;
+			});
+			marqueeData.getReleases(function(results) {
+				return $scope.releases = results;
+			});
+			$scope.filterMarquees($stateParams.release);
+		}
+	})
+});
 
-app.factory('marquees', function($http) {
+app.factory('marqueeData', function($http) {
 	return {
 		getMarquees: function(callback) {
 			$http.get('../js/marquees.json').success(callback);
-		}
-	};
-});
-
-app.factory('releases', function($http) {
-	return {
+		},
 		getReleases: function(callback) {
 			$http.get('../js/releases.json').success(callback);
 		}
 	};
 });
 
+var marquees;
 
-app.controller('MarqueeCtrl', function($scope, marquees, releases) {
+app.controller('MarqueeCtrl', function($scope, marqueeData) {
 
-	// $scope.marquees = marquees;
-	// $scope.releases = releases;
-
-	marquees.getMarquees(function(results) {
-		$scope.marquees = results;
+	marqueeData.getMarquees(function(results) {
+		return marquees = results;
 	});
 
-	releases.getReleases(function(results) {
-		$scope.releases = results;
+	marqueeData.getReleases(function(results) {
+		return $scope.releases = results;
 	});
 
-	// console.log();
 
 	// Add marquee to release
 	// $scope.addMarquee = function(){
@@ -76,14 +74,10 @@ app.controller('MarqueeCtrl', function($scope, marquees, releases) {
 	};
 
 	$scope.filterMarquees = function(releaseDate){
-		$scope.marquees.filter(function(marquee) {
-			console.log(marquee.release === releaseDate);
+		$scope.marquees = marquees.filter(function(marquee) {
+			return marquee.release === releaseDate;
 		});
-
 	};
 
 });
-
-
-
 
