@@ -21,6 +21,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			marqueeData.getMarquees(function(results) {
 				return $scope.marquees = results;
 			});
+			$scope.showMarquees = function(){
+				return $scope.mSearch;
+			};
 		}
 	})
 	.state('releases', {
@@ -34,9 +37,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
 				return $scope.releases = results;
 			});
 			$scope.filterMarquees($stateParams.release);
+
+
+
+			$scope.showMarquees = function(){
+				return 2 === 2;
+			};
+
 		}
 	})
 });
+
+// $scope.displayNone = function(){
+// 	return false;
+// };
+// $scope.displayAll = function(){
+// 	return true;
+// };
 
 app.controller('MarqueeCtrl', function($scope, marqueeData) {
 

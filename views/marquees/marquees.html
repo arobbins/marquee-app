@@ -1,5 +1,5 @@
 <ul class="panel-group" id="accordion">
-	<li ng-repeat="marquee in marquees | filter:mSearch">
+	<li ng-show="showMarquees()" ng-repeat="marquee in marquees | filter:mSearch">
 		<accordion close-others="false">
 			<accordion-group is-open="marquee.toggled">
 				<accordion-heading>
