@@ -9,20 +9,38 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body ng-controller="MarqueeCtrl" ng-cloak>
+
 		<!-- Header -->
-		<header id="header" class="container-fluid" ng-include src="'views/header.html'"></header>
+		<header id="header" class="container-fluid">
+			<div class="row">
+				<h1 class="h4 col-lg-2"><i class="fa fa-flask"></i> Marquee App</h1>
+				<div class="col-lg-1"></div>
+				<div class="col-lg-9 ng-scope pull-right">
+					<div class="btn-group pull-right">
+						<button type="button" class="btn btn-default" ng-click="toggleMarquees()">Toggle</button>
+						<button type="button" class="btn btn-default" ng-model="checkModel.editor" btn-checkbox><i class="fa fa-plus"></i> Release</button>
+						<button type="button" class="btn btn-default disabled" ng-click="addMarquee()"><i class="fa fa-plus"></i> Marquee</button>
+					</div>
+			  	 	<div class="input-group search pull-right">
+						<div class="input-group">
+
+							<!-- Search -->
+							<input type="text" ng-model="mSearch" class="form-control" placeholder="Search...">
+
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Releases <span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right">
+									<li ng-repeat="releaseDate in releases"><a ui-sref="releases({release:releaseDate})" ng-click="filterMarquees(releaseDate)">{{ releaseDate }}</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
 		<!-- Marquees -->
 		<section ui-view></section>
-
-
-<!-- 		<div ng-repeat="marquee in marquees">
-			{{ marquee.release }}
-		</div><br /><br />
-
-		<div ng-repeat="release in releases">
-			{{ release }}
-		</div> -->
 
 		<!-- Scripts -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>

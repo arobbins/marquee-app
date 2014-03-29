@@ -1,9 +1,28 @@
-/* Main Controller */
 var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
+
+app.factory('marqueeData', function($http) {
+	return {
+		getMarquees: function(callback) {
+			$http.get('../js/marquees.json').success(callback);
+		},
+		getReleases: function(callback) {
+			$http.get('../js/releases.json').success(callback);
+		}
+	};
+});
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
 	$stateProvider
+	.state('home', {
+		url: "/",
+		templateUrl: "../views/marquees/marquees.html",
+		controller: function($scope, $stateParams, marqueeData){
+			marqueeData.getMarquees(function(results) {
+				return $scope.marquees = results;
+			});
+		}
+	})
 	.state('releases', {
 		url: "/{release}",
 		templateUrl: "../views/marquees/marquees.html",
@@ -19,40 +38,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	})
 });
 
-app.factory('marqueeData', function($http) {
-	return {
-		getMarquees: function(callback) {
-			$http.get('../js/marquees.json').success(callback);
-		},
-		getReleases: function(callback) {
-			$http.get('../js/releases.json').success(callback);
-		}
-	};
-});
-
 app.controller('MarqueeCtrl', function($scope, marqueeData) {
 
+	marqueeData.getMarquees(function(results) {
+		return $scope.marquees = results;
+	});
 	marqueeData.getReleases(function(results) {
 		return $scope.releases = results;
 	});
-
-	// Add marquee to release
-	// $scope.addMarquee = function(){
-	// 	var count = 0;
-	// 	for(var i = 0; i <= $scope.marquees.length; i++){
-	// 		count++;
-	// 	}
-	// 	$scope.marquees.unshift({
-	// 		contentkey 	: 'contentkey',
-	// 		title 		: 'Marquee #' + count++,
-	// 		template 	: 'tpl-left',
-	// 		header 		: 'Headline',
-	// 		body 			: 'Body',
-	// 		button 		: 'Button',
-	// 		toggled		: false,
-	// 		image 		: '../imgs/marquee.jpeg'
-	// 	});
-	// };
 
 	// Remove marquee from release
 	$scope.removeMarquee = function(){
@@ -66,12 +59,13 @@ app.controller('MarqueeCtrl', function($scope, marqueeData) {
 		});
 	};
 
+	// Filter marquees based on release
 	$scope.filterMarquees = function(releaseDate){
 		marqueeData.getMarquees(function(results) {
 			$scope.marquees = results.filter(function(marquee) {
 				return marquee.release === releaseDate;
 			});
-		});		
+		});
 	};
 
 });
