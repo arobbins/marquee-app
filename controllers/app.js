@@ -1,4 +1,8 @@
-var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
+var app = angular.module('app', [
+	'ui.bootstrap',
+	'ui.router',
+	'xeditable'
+]);
 
 app.factory('marqueeData', function($http) {
 	return {
@@ -24,36 +28,39 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			$scope.showMarquees = function(){
 				return $scope.mSearch;
 			};
+			$scope.onrelease = false;
 		}
 	})
 	.state('releases', {
 		url: "/{release}",
 		templateUrl: "../views/marquees/marquees.html",
 		controller: function($scope, $stateParams, marqueeData){
+
 			marqueeData.getMarquees(function(results) {
 				return marquees = results;
 			});
 			marqueeData.getReleases(function(results) {
 				return $scope.releases = results;
 			});
-			$scope.filterMarquees($stateParams.release);
-
-
 
 			$scope.showMarquees = function(){
 				return 2 === 2;
 			};
-
+			$scope.onrelease = true;
 		}
 	})
 });
 
-// $scope.displayNone = function(){
-// 	return false;
-// };
-// $scope.displayAll = function(){
-// 	return true;
-// };
+
+
+app.directive('activerelease', function(){
+	return {
+		restrict: 'E',
+		template: '<h2 class="h4 col-lg-12">{{ marquees[0].release }} Release</h2>',
+		replace: true
+	}
+});
+
 
 app.controller('MarqueeCtrl', function($scope, marqueeData) {
 
@@ -64,7 +71,7 @@ app.controller('MarqueeCtrl', function($scope, marqueeData) {
 		return $scope.releases = results;
 	});
 
-	// Remove marquee from release
+	// Remove marquee from release Todo: fix
 	$scope.removeMarquee = function(){
 		$scope.marquees.splice(0,1);
 	};
