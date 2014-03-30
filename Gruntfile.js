@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
+
 		// Compiling Less
 		less: {
 			options: {
@@ -12,6 +13,7 @@ module.exports = function(grunt) {
 				src: "css/less/styles.less"
 			}
 		},
+
 		// Minifying JavaScript
 		uglify: {
 			options: {
@@ -20,9 +22,15 @@ module.exports = function(grunt) {
 			},
 			js: {
 				dest: "js/app.min.js",
-				src: "controllers/app.js"
+				src: [
+					"js/app.js",
+					"js/services/marquees-data.js",
+					"js/controllers/marquees-controller.js",
+					"js/directives/active-release.js"
+				]
 			}
 		},
+
 		// Combining all JavaScript
 		concat: {
 			options: {
@@ -45,10 +53,11 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+
 		// Watching files and folders for changes
 		watch: {
 			app: {
-				files: ['css/less/*.less', 'controllers/*.js', 'js/*.js'],
+				files: ['css/less/*.less', 'js/**/*.js'],
 				tasks: ['less', 'uglify', 'concat'],
 				options: {
 					spawn: false
