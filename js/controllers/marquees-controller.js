@@ -23,7 +23,7 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, MarqueeData) {
 
 	// Collapse and expand
 	$scope.toggleMarquees = function(){
-		$scope.marquees.forEach(function(marquee) {
+		$scope.m.marquees.forEach(function(marquee) {
 			return marquee.toggled = !marquee.toggled;
 		});
 	};
