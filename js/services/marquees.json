@@ -3,6 +3,7 @@
 	"marquees" : [
 		{
 			"contentkey"	: "aaa612",
+			"title"			: "Triple A",
 			"template"		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -13,6 +14,7 @@
 		},
 		{
 			"contentkey" 	: "pfw0314",
+			"title"			: "Points for Wireless",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -23,6 +25,7 @@
 		},
 		{
 			"contentkey" 	: "wyndham0314",
+			"title"			: "Wyndham Hotels",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -33,6 +36,7 @@
 		},
 		{
 			"contentkey" 	: "vinesse1013",
+			"title"			: "Vinesse",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -43,6 +47,7 @@
 		},
 		{
 			"contentkey"	: "ssolinkaccounts1211",
+			"title"			: "SSO Links Accounts",
 			"template"		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -53,6 +58,7 @@
 		},
 		{
 			"contentkey" 	: "select0213",
+			"title"			: "Select",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -63,6 +69,7 @@
 		},
 		{
 			"contentkey"	: "acelareactfall2012",
+			"title"			: "Acela",
 			"template"		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -73,6 +80,7 @@
 		},
 		{
 			"contentkey" 	: "amtrakbookingfall2012",
+			"title"			: "Amtrak Booking",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -83,6 +91,7 @@
 		},
 		{
 			"contentkey" 	: "amtrakbrand0713",
+			"title"			: "Amtrak Brand",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -93,6 +102,7 @@
 		},
 		{
 			"contentkey" 	: "facebook1112",
+			"title"			: "Facebook",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -103,6 +113,7 @@
 		},
 		{
 			"contentkey"	: "hyatt0913",
+			"title"			: "Hyatt",
 			"template"		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -113,6 +124,7 @@
 		},
 		{
 			"contentkey" 	: "metlife0913",
+			"title"			: "Metlife",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -123,6 +135,7 @@
 		},
 		{
 			"contentkey" 	: "partneroi1113",
+			"title"			: "Partner",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -133,6 +146,7 @@
 		},
 		{
 			"contentkey" 	: "energyplus1213",
+			"title"			: "Energy Plus",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -143,6 +157,7 @@
 		},
 		{
 			"contentkey" 	: "budgetJan2014",
+			"title"			: "Budget",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",
@@ -153,6 +168,7 @@
 		},
 		{
 			"contentkey" 	: "pfw1013",
+			"title"			: "Points for Wireless",
 			"template" 		: "tpl-left",
 			"header" 		: "Headline",
 			"body" 			: "Body",

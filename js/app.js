@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable']);
+var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable', 'ngDialog']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
@@ -8,23 +8,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		url: "/",
 		templateUrl: "../views/marquees/marquees.html",
 		controller: function($scope, $stateParams, MarqueeData){
-
 			$scope.onrelease = false;
 		}
+
 	})
 	.state('releases', {
 		url: "/{release}",
 		templateUrl: "../views/marquees/marquees.html",
 		controller: function($scope, $stateParams, MarqueeData){
-
-			// (function(){
-			// 	return $scope.search.id = true;
-			// }());
-
-			$scope.onrelease = true;
-
+			$scope.search.release = $stateParams;
 		}
 	})
 });
-
-

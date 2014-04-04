@@ -1,24 +1,48 @@
+app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeData) {
 
-app.controller('MarqueesCtrl', function($scope, $stateParams, MarqueeData) {
 
+	// Storing all of our marquees in this m object when we search
 	$scope.search = {
-	    m: ''
-	}
+	    m: '',
+	    release: ''
+	};
 
-	$scope.keydown = function(){
-		MarqueeData.getMarqueeData(function(results) {
-			return $scope.m.marquees = results.marquees;
-		});
-	}
+	$scope.disabled = "disabled";
 
+	// Setting the results of making the AJAX call to our 'm' object.
 	MarqueeData.getMarqueeData(function(results) {
 		return $scope.m = results;
 	});
 
+	$scope.checkRelease = function(){
+		if($scope.search.m){
+			$scope.onrelease = false;
+		} else {
+			$scope.onrelease = true;
+		}
+		return $scope.onrelease;
+	};
+	
+	$scope.clickToOpen = function () {
+		ngDialog.open({ 
+			template: '../../views/newrelease.html',
+			className: 'ngdialog-theme-plain',
+			scope: $scope
+		});
+	};
 
-	// Remove marquee from release Todo: fix
+	$scope.showAllMarquees = function(){
+		MarqueeData.getMarqueeData(function(results) {
+			return $scope.m.marquees = results.marquees;
+		});
+	};
+
 	$scope.removeMarquee = function(){
-		$scope.marquees.splice(0,1);
+
+	};
+
+	$scope.addMarquee = function(){
+
 	};
 
 	// Collapse and expand
@@ -30,18 +54,13 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, MarqueeData) {
 
 	// Filter marquees based on release
 	$scope.filterMarquees = function(releaseDate){
+		$scope.search.m = '';
+		$scope.disabled = '';
 		MarqueeData.getMarqueeData(function(results) {
 			$scope.m.marquees = results.marquees.filter(function(marquee){
 				return marquee.release === releaseDate;
 			});
 		});
 	};
-});
 
-// $scope.filterMarquees = function(releaseDate){
-// 	marqueeData.getMarquees(function(results) {
-// 		$scope.marquees = results.filter(function(marquee) {
-// 			return marquee.release === releaseDate;
-// 		});
-// 	});
-// };
+});

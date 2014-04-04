@@ -141,3 +141,7 @@ ul#accordion {
   font-size: 20em;
   text-align: center;
 }
+.ngdialog.ngdialog-theme-plain .ngdialog-content {
+  border-radius: 4px;
+  width: 600px;
+}
