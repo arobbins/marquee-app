@@ -19,4 +19,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			$scope.search.release = $stateParams;
 		}
 	})
-});
+});;
