@@ -6,7 +6,7 @@
 			"title"			: "Triple A",
 			"template"		: "tpl-left",
 			"header" 		: "This is an example that is so cool",
-			"body" 			: "This is an example of awesome body copy. This is an example of awesome body 							copy. This is an example of awesome body copy. This is an example of awesome 							body copy.",
+			"body" 			: "This is an example of awesome body copy. This is an example of awesome body copy. This is an example of awesome body copy. This is an example of awesome body copy.",
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
