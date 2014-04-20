@@ -9,8 +9,43 @@ module.exports = function(grunt) {
 				ieCompat: false
 			},
 			dev: {
-				dest: "css/styles.css",
-				src: "css/less/styles.less"
+				dest: "css/styles.min.css",
+				src: "css/less/main.less"
+			}
+		},
+
+		// Combining all JavaScript & CSS
+		concat: {
+			options: {
+				separator: "\n"
+			},
+			js: {
+				dest: "js/app.min.js",
+				src: [
+					"js/libs/ui-bootstrap-tpls-0.10.0.min.js",
+					"js/libs/angular-ui-router.min.js",
+					"js/libs/xeditable.min.js",
+					"js/app.min.js"
+				]
+			},
+			css: {
+				dest: "css/styles.min.css",
+				src: [
+					"css/libs/xeditable.css",
+					"css/styles.min.css"
+				]
+			}
+		},
+
+		// Minifying CSS
+		cssmin: {
+			add_banner: {
+				options: {
+					banner: '/* My minified css file */'
+				},
+				files: {
+					'css/styles.min.css': 'css/styles.min.css'
+				}
 			}
 		},
 
@@ -31,34 +66,11 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Combining all JavaScript
-		concat: {
-			options: {
-				separator: "\n"
-			},
-			js: {
-				dest: "js/app.min.js",
-				src: [
-					"js/libs/ui-bootstrap-tpls-0.10.0.min.js",
-					"js/libs/angular-ui-router.min.js",
-					"js/libs/xeditable.min.js",
-					"js/app.min.js"
-				]
-			},
-			css: {
-				dest: "css/styles.css",
-				src: [
-					"css/xeditable.css",
-					"css/styles.css"
-				]
-			}
-		},
-
 		// Watching files and folders for changes
 		watch: {
 			app: {
 				files: ['css/less/*.less', 'js/**/*.js'],
-				tasks: ['less', 'uglify', 'concat'],
+				tasks: ['less', 'cssmin', 'uglify', 'concat'],
 				options: {
 					spawn: false
 			   }
@@ -68,11 +80,12 @@ module.exports = function(grunt) {
 
 	// Loading plugins
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Registering plugins
-	grunt.registerTask('default', ['less', 'uglify', 'concat', 'watch']);
+	grunt.registerTask('default', ['less', 'cssmin', 'uglify', 'concat', 'watch']);
 
 };

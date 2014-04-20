@@ -1,6 +1,6 @@
 <activerelease ng-show="checkRelease()"></activerelease>
 
-<ul class="panel-group" id="accordion">
+<ul class="panel-group accordion">
 	<li ng-repeat="marquee in m.marquees | filter:search.m">
 		<accordion close-others="false">
 			<accordion-group is-open="marquee.toggled">
@@ -9,9 +9,9 @@
 				</accordion-heading>
 
 				<!-- Marquee -->
-				<div id="marquee" class="{{ marquee.template }}" ng-class="theme">
+				<div class="marquee">
 					<img src="{{ marquee.image }}" class="img-responsive" alt="" />
-					<div class="marquee-body">
+					<div class="marquee-body {{ marquee.template }} theme-{{ marquee.theme }}">
 						<h1 class="hdr-small" editable-text="marquee.header">{{ marquee.header }}</h1>
 						<p editable-text="marquee.body">{{ marquee.body }}</p>
 						<a href="#" class="button" editable-text="marquee.button">{{ marquee.button }}</a>
@@ -19,7 +19,7 @@
 				</div>
 
 				<!-- Options -->
-				<nav class="container-fluid" id="options" ng-include src="'views/marquees/options.html'"></nav>
+				<nav class="container-fluid options" ng-include src="'views/marquees/options.html'"></nav>
 
 			</accordion-group>
 		</accordion>

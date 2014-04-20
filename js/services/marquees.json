@@ -5,12 +5,13 @@
 			"contentkey"	: "aaa612",
 			"title"			: "Triple A",
 			"template"		: "tpl-left",
-			"header" 		: "Headline",
-			"body" 			: "Body",
+			"header" 		: "This is an example that is so cool",
+			"body" 			: "This is an example of awesome body copy. This is an example of awesome body 							copy. This is an example of awesome body copy. This is an example of awesome 							body copy.",
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "March-14"
+			"release"		: "March-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "pfw0314",
@@ -21,7 +22,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "February-14"
+			"release"		: "February-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "wyndham0314",
@@ -32,7 +34,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "January-14"
+			"release"		: "January-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "vinesse1013",
@@ -43,7 +46,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "December-13"
+			"release"		: "December-13",
+			"theme"			: "light"
 		},
 		{
 			"contentkey"	: "ssolinkaccounts1211",
@@ -54,7 +58,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release" 		: "March-14"
+			"release" 		: "March-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "select0213",
@@ -65,7 +70,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "February-14"
+			"release"		: "February-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey"	: "acelareactfall2012",
@@ -76,7 +82,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "January-14"
+			"release"		: "January-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "amtrakbookingfall2012",
@@ -87,7 +94,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "March-14"
+			"release"		: "March-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "amtrakbrand0713",
@@ -98,7 +106,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "December-13"
+			"release"		: "December-13",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "facebook1112",
@@ -109,7 +118,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "February-14"
+			"release"		: "February-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey"	: "hyatt0913",
@@ -120,7 +130,8 @@
 			"button" 		: "Button",
 			"image"			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release" 		: "March-14"
+			"release" 		: "March-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "metlife0913",
@@ -131,7 +142,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "December-13"
+			"release"		: "December-13",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "partneroi1113",
@@ -142,7 +154,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "March-14"
+			"release"		: "March-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "energyplus1213",
@@ -153,7 +166,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "January-14"
+			"release"		: "January-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "budgetJan2014",
@@ -164,7 +178,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "January-14"
+			"release"		: "January-14",
+			"theme"			: "light"
 		},
 		{
 			"contentkey" 	: "pfw1013",
@@ -175,7 +190,8 @@
 			"button" 		: "Button",
 			"image" 			: "../imgs/marquee.jpeg",
 			"toggled"		: false,
-			"release"		: "January-14"
+			"release"		: "January-14",
+			"theme"			: "light"
 		}
 	]
 }
