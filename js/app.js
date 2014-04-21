@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable', 'ngDialog']);
+var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable', 'ngDialog', 'ngSanitize']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');

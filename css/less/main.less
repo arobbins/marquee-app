@@ -9,21 +9,21 @@ Authors		|		Andrew Robbins (arobbins@olson.com)
 
 1) CSS Structure
 
-extend.less 		|  Overrides for the plugins we use (X-edit, ngDialog, Bootstrap, etc).
+extend.less 		|  Overrides for the plugins we use (X-edit, ngDialog, Bootstrap, etc)
 ----------------	|	--------------------------------------------------------------------------------------
-components.less 	|  Structural elements (headers, sections, etc).
+components.less 	|  Structural elements (headers, sections, etc)
 ----------------  |	--------------------------------------------------------------------------------------
-templates.less 	|	Specific marquee templates (tpl-left, tpl-center, etc).
+templates.less 	|	Specific marquee templates (tpl-left, tpl-center, etc)
 ----------------	|	--------------------------------------------------------------------------------------
-mixins.less 		|	Code that we reuse throughout our app.
+mixins.less 		|	Code that we reuse throughout our app
 ----------------	|	--------------------------------------------------------------------------------------
-variables.less 	|	Variables that we reuse throughout our app.
+variables.less 	|	Variables that we reuse throughout our app
 ----------------	|	--------------------------------------------------------------------------------------
-media.less 			| 	Media query specifics.
+media.less 			| 	Media query specifics
 ----------------  |	--------------------------------------------------------------------------------------
-main.less 			|	Our "main" stylesheet. Mostly imports the rest of the styles.
+main.less 			|	Our "main" stylesheet. Mostly imports the rest of the styles
 ----------------  |	--------------------------------------------------------------------------------------
-typography.less 	|	Styling for headlines, paragraphs, buttons, etc.
+typography.less 	|	Styling for headlines, paragraphs, buttons, etc
 ----------------  |	--------------------------------------------------------------------------------------
 
 
@@ -40,13 +40,16 @@ hdr - Header
 
 */
 
+
 html{ // Mimicing prod
 	font-size:62.5%;
 }
 body{ // Mimicing prod
 	margin: 0 auto;
-	font-family:@font-stack-body;
+	font-family:@font-stack-secondary;
 }
+
+@font-face { font-family:"Frutiger Light"; src:url("fonts/frutigerltstd-light.woff") format("woff"), url("fonts/frutigerltstd-light.ttf") format("embedded-opentype"), url("fonts/frutigerltstd-light.svg#webfontwzdI1SE8") format("svg"); font-weight:normal; font-style:normal; }
 
 @import "variables";
 @import "mixins";

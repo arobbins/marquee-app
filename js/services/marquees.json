@@ -5,10 +5,10 @@
 			"contentkey"	: "aaa612",
 			"title"			: "Triple A",
 			"template"		: "tpl-left",
-			"header" 		: "This is an example that is so cool",
+			"header" 		: "<span>This is an example<\/span> <b>that is so cool<\/b>",
 			"body" 			: "This is an example of awesome body copy. This is an example of awesome body copy. This is an example of awesome body copy. This is an example of awesome body copy.",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "March-14",
 			"theme"			: "light"
@@ -20,7 +20,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "February-14",
 			"theme"			: "light"
@@ -32,7 +32,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light"
@@ -44,7 +44,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "December-13",
 			"theme"			: "light"
@@ -56,7 +56,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release" 		: "March-14",
 			"theme"			: "light"
@@ -68,7 +68,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "February-14",
 			"theme"			: "light"
@@ -80,7 +80,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light"
@@ -92,7 +92,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "March-14",
 			"theme"			: "light"
@@ -104,7 +104,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "December-13",
 			"theme"			: "light"
@@ -116,7 +116,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "February-14",
 			"theme"			: "light"
@@ -128,7 +128,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image"			: "../imgs/marquee.jpeg",
+			"image"			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release" 		: "March-14",
 			"theme"			: "light"
@@ -140,7 +140,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "December-13",
 			"theme"			: "light"
@@ -152,7 +152,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "March-14",
 			"theme"			: "light"
@@ -164,7 +164,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light"
@@ -176,7 +176,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light"
@@ -188,7 +188,7 @@
 			"header" 		: "Headline",
 			"body" 			: "Body",
 			"button" 		: "Button",
-			"image" 			: "../imgs/marquee.jpeg",
+			"image" 			: "../images/marquee.jpeg",
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light"
