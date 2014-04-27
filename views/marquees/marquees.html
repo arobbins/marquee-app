@@ -8,15 +8,8 @@
 					{{ marquee.contentkey }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': marquee.toggled, 'glyphicon-chevron-right': !marquee.toggled}"></i>
 				</accordion-heading>
 
-				<!-- Marquee -->
-				<div class="marquee">
-					<img src="{{ marquee.image }}" class="img-responsive" alt="" />
-					<div class="marquee-body {{ marquee.template }} theme-{{ marquee.theme }}">
-						<h1 class="hdr-small" editable-text="marquee.header" ng-bind-html="marquee.header"></h1>
-						<p editable-text="marquee.body">{{ marquee.body }}</p>
-						<a href="#" class="button" editable-text="marquee.button">{{ marquee.button }}</a>
-					</div>
-				</div>
+				<!-- Custom directive to show the body of each marquee. Used to customize the HTML. -->
+				<marquees id="homeCarousel"></marquees>
 
 				<!-- Options -->
 				<nav class="container-fluid options" ng-include src="'views/marquees/options.html'"></nav>

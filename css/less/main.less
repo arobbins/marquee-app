@@ -1,45 +1,37 @@
 /*
-
 Marquee App - Documentation & Styleguide
 ========================================
-Version		|		1.0.0
-Repository	|		https://github.com/arobbins/marquee-app
-Authors		|		Andrew Robbins (arobbins@olson.com)
+Version			|	1.0.0
+Author			|	Andrew Robbins (arobbins@olson.com)
+Repository		|	https://github.com/arobbins/marquee-app
 
 
 1) CSS Structure
-
+================
 extend.less 		|  Overrides for the plugins we use (X-edit, ngDialog, Bootstrap, etc)
-----------------	|	--------------------------------------------------------------------------------------
 components.less 	|  Structural elements (headers, sections, etc)
-----------------  |	--------------------------------------------------------------------------------------
 templates.less 	|	Specific marquee templates (tpl-left, tpl-center, etc)
-----------------	|	--------------------------------------------------------------------------------------
-mixins.less 		|	Code that we reuse throughout our app
-----------------	|	--------------------------------------------------------------------------------------
-variables.less 	|	Variables that we reuse throughout our app
-----------------	|	--------------------------------------------------------------------------------------
+mixins.less 		|	Code that we reuse throughout
+variables.less 	|	Reusable variables
 media.less 			| 	Media query specifics
-----------------  |	--------------------------------------------------------------------------------------
 main.less 			|	Our "main" stylesheet. Mostly imports the rest of the styles
-----------------  |	--------------------------------------------------------------------------------------
 typography.less 	|	Styling for headlines, paragraphs, buttons, etc
-----------------  |	--------------------------------------------------------------------------------------
 
 
 2) Definitions
-
-tpl - template
-hdr - Header
+==============
+tpl 	|	Template
+hdr 	|	Header
 
 
 3) Workflow
 - Grunt
 - LESS
 
-
 */
 
+@import "extend";
+@font-face { font-family:"Frutiger Light"; src:url("fonts/frutigerltstd-light.woff") format("woff"), url("fonts/frutigerltstd-light.ttf") format("embedded-opentype"), url("fonts/frutigerltstd-light.svg#webfontwzdI1SE8") format("svg"); font-weight:normal; font-style:normal; }
 
 html{ // Mimicing prod
 	font-size:62.5%;
@@ -49,10 +41,7 @@ body{ // Mimicing prod
 	font-family:@font-stack-secondary;
 }
 
-@font-face { font-family:"Frutiger Light"; src:url("fonts/frutigerltstd-light.woff") format("woff"), url("fonts/frutigerltstd-light.ttf") format("embedded-opentype"), url("fonts/frutigerltstd-light.svg#webfontwzdI1SE8") format("svg"); font-weight:normal; font-style:normal; }
-
 @import "variables";
 @import "mixins";
 @import "components";
 @import "media";
-@import "extend";

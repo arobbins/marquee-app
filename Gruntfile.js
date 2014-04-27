@@ -61,7 +61,8 @@ module.exports = function(grunt) {
 					"js/app.js",
 					"js/services/marquees-data.js",
 					"js/controllers/marquees-controller.js",
-					"js/directives/active-release.js"
+					"js/directives/active-release.js",
+					"js/directives/marquees.js"
 				]
 			}
 		},

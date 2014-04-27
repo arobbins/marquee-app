@@ -1,18 +1,155 @@
 // Templates
-.tpl-left{
+
+/* Left */
+.tpl-left {
 	top: 23%;
 	left: 10%;
 	width: 42%;
 }
+/* Right */
+.tpl-right {
+	left: 55%;
+	top: 21%;
+	width: 50%;
+}
+/* Right center */
+.tpl-right-center {
+	left: 44%;
+	top: 31%;
+	width: 50%;
+}
+/* Center button left & Center button right */
+.tpl-center-btn-left,
+.tpl-center-btn-right {
+	top: 77%;
+	left: 50%;
+	width: 50%;
+	margin-left: -25%;
+	p {
+		width:75%;
+	}
+}
+.tpl-center-btn-left {
+	p {
+		float:right;
+		margin-left:2%;
+	}
+	.marquee-cta{
+		float:left;
+	}
+}
+.tpl-center-btn-right {
+	p {
+		float:left;
+		margin-right:2%;
+	}
+	.marquee-cta{
+		float:right;
+	}
+}
+/* Center button center */
+.tpl-center-btn-center {
+	top: 40%;
+	width: 60%;
+	margin: 0 20%;
+	text-align: center;
+	p {
+		width: 100%;
+	}
+}
+/* Center button center bottom */
+.tpl-center-btn-center-btm {
+	top: 82%;
+	width: 60%;
+	margin: 0 20%;
+	text-align: center;
+	.marquee-copy p {
+		width: 100%;
+	}
+}
+/* Partner */
+.tpl-partner {
+	.leftAlignedContent;
+	p {
+		width: 74%;
+	}
+	& + img {
+		text-align: right;
+		margin-left: 58%;
+		padding-top: 6%;
+		padding-bottom: 6.6%;
+		background: url('../images/bg-inset.png') no-repeat right 83%;
+		background-size: contain;
+		width: 30%;
+	}
+	&[class*="type-"] {
+		.button {
+			i {
+				background-image: url(../images/icon-program-white.png);
+				background-image: url(../images/icon-program-white.svg);
+				background-repeat: no-repeat;
+				background-size: 22px;
+				display: inline-block;
+				width: 33px;
+				height: 23px;
+				vertical-align: middle;
+			}
+		}
+	}
+	&[class*="type-cars"] .button i {
+		background-position:0px -215px;
+	}
+	&[class*="type-retail"] .button i {
+		background-position:0px -431px;
+	}
+	&[class*="type-travel"] .button i {
+		background-position:0px -323px;
+	}
+	&[class*="type-finance"] .button i {
+		background-position:0px -542px;
+	}
+	&[class*="type-pfs"] .button i {
+		background-position:0px -650px;
+	}
+	&[class*="type-hotels"] .button i {
+		background-position:0px -107px;
+	}
+	&[class*="type-train"] .button i {
+		background-position:0px 0px;
+	}
+}
+/* Routes - Can we just make the coordinates the same as left? Why the difference here? */
+.tpl-routes {
+	.leftAlignedContent;
+	& + img {
+		text-align: right;
+		margin-left: 61%;
+		padding-top: 3%;
+		padding-bottom: 4.5%;
+	}
+}
+/* Tiers */
+.tpl-tiers {
+  left: 44%;
+  top: 20.5%;
+}
+/* Boardingbonus */
+.tpl-boardingbonus {
+  top: 25%;
+  left: 54%;
+}
 
 // Themes
-.theme-light{
-	h1, p, strong, span{
+.theme-light {
+	h1, p, strong, span, em{
 		color: #fff;
 	}
 }
-.theme-dark{
-	h1, p, strong, span{
+.theme-dark {
+	h1{
+		color:@darkblue;
+	}
+	p, strong, em{
 		color: #323232;
 	}
 }

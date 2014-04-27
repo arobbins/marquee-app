@@ -1,0 +1,11 @@
+<div class="marquee">
+	<div class="marquee-body tpl-{{ marquee.template }} theme-{{ marquee.theme }} {{ marquee.type }}">
+		<h1 editable-text="marquee.header" ng-bind-html="marquee.header" ng-if="marquee.header" class="{{ marquee.headerStyle }}">{{ marquee.header }}</h1>
+		<p editable-text="marquee.body">{{ marquee.body }}</p>
+		<div class="marquee-cta">
+			<a href="#" class="button" editable-text="marquee.button"><i></i>{{ marquee.button }}</a>
+			<span class="terms" ng-if="marquee.terms">{{ marquee.terms }}</span>
+		</div>
+	</div>
+	<img src="{{ marquee.image }}" class="img-responsive" alt="{{ marquee.title }}" />
+</div>

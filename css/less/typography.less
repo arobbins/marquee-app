@@ -13,40 +13,143 @@ p.wide {
 
 // Headers (1em = 10px)
 h1{
-  line-height: 95%;
+  font-size:1em;
   text-transform: uppercase;
   font-family: @font-stack-primary;
-  b{
-    font-family: FrutigerLTCom-Bold, arial, sans-serif;
+  b, span{
+    line-height:1em;
     display: block;
+    &.bold{
+      font-family: @font-stack-primary-bold;
+    }
   }
-  span {
-    display: block;
+  &.bold{
+    font-family: @font-stack-primary-bold;
   }
 }
-.hdr-large{
+/*
+
+"hdr" represents a headline. The second letter represents the size of the top line. The third letter represents the size of the bottom line. When there's only 1 letter, both lines share the same size.
+
+l     |   large
+m     |   medium
+s     |   small
+xs    |   extra small
+xxs   |   extra extra small
+
+*/
+// Large
+.hdr-l{
   font-size:6.3em;
 }
-.hdr-medium{
+.hdr-l-m{
+  b{font-size:6.3em;}
+  span{font-size:5em;}
+}
+.hdr-l-s{
+  b{font-size:6.3em;}
+  span{font-size:3.9em;}
+}
+.hdr-l-xs{
+  b{font-size:6.3em;}
+  span{font-size:3.4em;}
+}
+.hdr-l-xxs{
+  b{font-size:6.3em;}
+  span{font-size:2.8em;}
+}
+
+// Medium
+.hdr-m{
   font-size:5em;
 }
-.hdr-small{
+.hdr-m-s{
+  b{font-size:5em;}
+  span{font-size:3.9em;}
+}
+.hdr-m-xs{
+  b{font-size:5em;}
+  span{font-size:3.4em;}
+}
+.hdr-m-xxs{
+  b{font-size:5em;}
+  span{font-size:2.8em;}
+}
+.hdr-m-l{
+  span{font-size:5em;}
+  b{font-size:6.3em;}
+}
+
+// Small
+.hdr-s{
   font-size:3.9em;
 }
-.hdr-xsmall{
+.hdr-s-xs{
+  b{font-size:3.9em;}
+  span{font-size:3.4em;}
+}
+.hdr-s-xxs{
+  b{font-size:3.9em;}
+  span{font-size:2.8em;}
+}
+.hdr-s-m{
+  span{font-size:3.9em;}
+  b{font-size:5em;}
+}
+.hdr-s-l{
+  span{font-size:3.9em;}
+  b{font-size:6.3em;}
+}
+
+// Extra Small
+.hdr-xs{
   font-size:3.4em;
 }
-.hdr-xxsmall{
+.hdr-xs-xxs{
+  b{font-size:3.4em;}
+  span{font-size:2.8em;}
+}
+.hdr-xs-s{
+  span{font-size:3.4em;}
+  b{font-size:3.9em;}
+}
+.hdr-xs-m{
+  span{font-size:3.4em;}
+  b{font-size:5em;}
+}
+.hdr-xs-l{
+  span{font-size:3.4em;}
+  b{font-size:6.3em;}
+}
+
+// Extra Extra Small
+.hdr-xxs{
   font-size:2.8em;
+}
+.hdr-xxs-xs{
+  span{font-size:2.8em;}
+  b{font-size:3.4em;}
+}
+.hdr-xxs-s{
+  span{font-size:2.8em;}
+  b{font-size:3.9em;}
+}
+.hdr-xxs-m{
+  span{font-size:2.8em;}
+  b{font-size:5em;}
+}
+.hdr-xxs-l{
+  span{font-size:2.8em;}
+  b{font-size:6.3em;}
 }
 
 // Buttons (1em = 10px)
 .button{
   font-family: @font-stack-primary;
-  font-size:1.7em;
+  font-size:1.8em;
   color: white;
   text-decoration: none;
-  padding: .4em 1em;
+  padding: .2em 1em;
   text-transform: uppercase;
   border: 1px solid white;
   float: left;
@@ -54,13 +157,36 @@ h1{
   border-radius: 0;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fcab10), to(#ff9019));
   background-image: -webkit-linear-gradient(top, #fcab10, #ff9019);
-  background-color: #ff9019;
   background-image: -moz-linear-gradient(top, #fcab10, #ff9019);
   background-image: -ms-linear-gradient(top, #fcab10, #ff9019);
   background-image: -o-linear-gradient(top, #fcab10, #ff9019);
   background-image: linear-gradient(top, #fcab10, #ff9019);
+  background-color: #ff9019;
   background-repeat: repeat-x;
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
   text-shadow: 0 1px 1px #323232;
+  filter: dropshadow(color=#666666, offx=2, offy=-1);
+  &:hover {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff9019), to(#fcab10));
+    background-image: -webkit-linear-gradient(top, #ff9019, #fcab10);
+    background-image: -moz-linear-gradient(top, #ff9019, #fcab10);
+    background-image: -ms-linear-gradient(top, #ff9019, #fcab10);
+    background-image: -o-linear-gradient(top, #ff9019, #fcab10);
+    background-image: linear-gradient(top, #ff9019, #fcab10);
+    background-color: #fcab10;
+    background-repeat: repeat-x;
+    color: #ffffff;
+  }
+}
+.terms {
+  clear: left;
+  font-size: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: .7em;
+  color: #808080;
+  display: block;
+  line-height: 1.3em;
 }
