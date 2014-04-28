@@ -1,5 +1,6 @@
 app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeData) {
 
+	$scope.isCollapsed = true;
 
 	// Storing all of our marquees in this m object when we search
 	$scope.search = {
@@ -22,9 +23,9 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		}
 		return $scope.onrelease;
 	};
-	
+
 	$scope.clickToOpen = function () {
-		ngDialog.open({ 
+		ngDialog.open({
 			template: '../../views/newrelease.html',
 			className: 'ngdialog-theme-plain',
 			scope: $scope

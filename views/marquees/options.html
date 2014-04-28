@@ -1,18 +1,19 @@
 <!-- Templates -->
 <div class="btn-group dropup">
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		Templates <span class="caret"></span>
+		Templates <i class="fa fa-caret-up"></i>
 	</button>
 
 	<ul class="dropdown-menu" role="menu">
 		<li role="presentation" class="dropdown-header">Generic Items</li>
-		<li><a href="http://www.google.com" ng-click="tpl-left()">Left</a></li>
-		<li><a href="#">Right</a></li>
-		<li><a href="#">Center</a></li>
-		<li><a href="#">Partner</a></li>
-		<li><a href="#">Routes</a></li>
-		<li><a href="#">Tiers</a></li>
-		<li><a href="#">Boardingbonus</a></li>
+		<li><a href="#" ng-click="marquee.template = 'left'">Left</a></li>
+		<li><a href="#" ng-click="marquee.template = 'right'">Right</a></li>
+		<li><a href="#" ng-click="marquee.template = 'center-btn-right'">Center Button Right</a></li>
+		<li><a href="#" ng-click="marquee.template = 'center-btn-left'">Center Button Left</a></li>
+		<li><a href="#" ng-click="marquee.template = 'partner'">Partner</a></li>
+		<li><a href="#" ng-click="marquee.template = 'routes'">Routes</a></li>
+		<li><a href="#" ng-click="marquee.template = 'tiers'">Tiers</a></li>
+		<li><a href="#" ng-click="marquee.template = 'boardingbonus'">Boardingbonus</a></li>
 		<li class="divider"></li>
 		<li role="presentation" class="dropdown-header">Promotions</li>
 		<li><a href="#">Left</a></li>
@@ -24,49 +25,73 @@
 <!-- Theme -->
 <div class="btn-group dropup">
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		Themes <span class="caret"></span>
+		Themes <i class="fa fa-caret-up"></i>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><a href="#" ng-click="theme='theme-light'">Light</a></li>
-		<li><a href="#" ng-click="theme='theme-dark'">Dark</a></li>
+		<li><a href="#" ng-click="marquee.theme = 'light'">Light</a></li>
+		<li><a href="#" ng-click="marquee.theme = 'dark'">Dark</a></li>
 	</ul>
 </div>
 
 <!-- Button Icons -->
 <div class="btn-group dropup">
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		Button Icons <span class="caret"></span>
+		Button Icons <i class="fa fa-caret-up"></i>
 	</button>
 
 	<ul class="dropdown-menu" role="menu">
-		<li><a href="#">Retail</a></li>
-		<li><a href="#">Cars</a></li>
-		<li><a href="#">Travel</a></li>
-		<li><a href="#">Finance</a></li>
-		<li><a href="#">Hotels</a></li>
-		<li><a href="#">Train</a></li>
-		<li><a href="#">PFS</a></li>
+		<li><a href="#" ng-click="marquee.type = 'retail'">Retail</a></li>
+		<li><a href="#" ng-click="marquee.type = 'cars'">Cars</a></li>
+		<li><a href="#" ng-click="marquee.type = 'travel'">Travel</a></li>
+		<li><a href="#" ng-click="marquee.type = 'finance'">Finance</a></li>
+		<li><a href="#" ng-click="marquee.type = 'hotels'">Hotels</a></li>
+		<li><a href="#" ng-click="marquee.type = 'train'">Train</a></li>
+		<li><a href="#" ng-click="marquee.type = 'pfs'">PFS</a></li>
 	</ul>
 </div>
+<button type="button" class="btn btn-default pull-right"><i class="fa fa-upload"></i> Upload Image</button>
 
 <!-- Header style -->
-<div class="btn-group dropup">
-	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		Header style <span class="caret"></span>
-	</button>
-
-	<ul class="dropdown-menu" role="menu">
-		<li><a href="#">Option 1</a></li>
-		<li><a href="#">Option 2</a></li>
-		<li><a href="#">Option 3</a></li>
-		<li><a href="#">Option 4</a></li>
-		<li><a href="#">Option 5</a></li>
-		<li><a href="#">Option 6</a></li>
-		<li><a href="#">Option 7</a></li>
-	</ul>
+<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" ng-click="isCollapsed = !isCollapsed">
+	Header styles <i class="fa fa-caret-down"></i>
+</button>
+<div collapse="isCollapsed">
+	<div class="well well-lg">
+		<ul>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-l'">hdr-l</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-l-m'">hdr-l-m</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-l-s'">hdr-l-s</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-l-xs'">hdr-l-xs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-l-xxs'">hdr-l-xxs</a></li>
+			<li class="divider"></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-m'">hdr-m</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-m-s'">hdr-m-s</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-m-xs'">hdr-m-xs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-m-xxs'">hdr-m-xxs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-m-l'">hdr-m-l</a></li>
+			<li class="divider"></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-s'">hdr-s</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-s-xs'">hdr-s-xs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-s-xxs'">hdr-s-xxs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-s-m'">hdr-s-m</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-s-l'">hdr-s-l</a></li>
+			<li class="divider"></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xs'">hdr-xs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xs-xxs'">hdr-xs-xxs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xs-s'">hdr-xs-s</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xs-m'">hdr-xs-m</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xs-l'">hdr-xs-l</a></li>
+			<li class="divider"></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xxs'">hdr-xxs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xxs-xs'">hdr-xxs-xs</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xxs-s'">hdr-xxs-s</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xxs-m'">hdr-xxs-m</a></li>
+			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-xxs-l'">hdr-xxs-l</a></li>
+		</ul>
+	</div>
 </div>
 
-<button type="button" class="btn btn-default"><i class="fa fa-upload"></i> Upload Image</button>
+
 <!-- <span class="btn btn-default btn-file">
     Browse <input type="file">
 </span> -->
