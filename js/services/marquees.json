@@ -5,7 +5,7 @@
 			"contentkey"	: "aaa612",
 			"title"			: "Triple A",
 			"template"		: "left",
-			"header" 		: "<span>This is an example<\/span> <b class=\"bold\">that is so cool<\/b>",
+			"header" 		: "s:This is an example b:that is so cool",
 			"body" 			: "This is an example of awesome body copy. This is an example of awesome body copy. This is an example of awesome body copy. This is an example of awesome body copy.",
 			"button" 		: "Learn more",
 			"image" 			: "../images/aaa612/marquee.jpeg",
