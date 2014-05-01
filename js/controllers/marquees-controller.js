@@ -5,10 +5,25 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		// Declaring our string and patterns
 		var patternSmall = /s:(.*)b:/;
 		var patternBig = /b:(.*)/;
-			
+
 		// Matching the small text
 		var matchSmall = patternSmall.exec(str);
 		var smalltext = matchSmall[1];
+
+		// Works but not sure of order
+		"s:This is an example b:that is so cool".replace(/s:(.*)b:(.*)/, function(match, $1, $2, offset, string){
+			return '<span>' + $1 + '</span>' + '<b>' + $2 + '</b>';
+		});
+
+
+		/^.*?\bs:(.*)\b.*?\bb:(.*)\b.*?$/m.exec("b:This is an example s:that is so cool");
+
+		var str = 's: This is an example b: This is also an example';
+		var reg = /[s:](.*)[b:]|[s:]/;
+
+		reg.exec(str);
+
+		alert(str.match(reg)[0]);
 
 		// Matching the big text
 		var matchBig = patternBig.exec(str);
@@ -18,17 +33,18 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		var smalltext = "<span>" + smalltext + "</span>";
 		var bigtext = "<b>" + bigtext + "</b>";
 
+
 		// return [smalltext, bigtext];
 		return {
-			smalltext: smalltext, 
+			smalltext: smalltext,
 			bigtext: bigtext
-    	}; 
+    	};
 		// console.log(smalltext);
 		// console.log(bigtext);
 	}
 
-	searchText($scope.m.marquees[0].header);
-	
+	// searchText($scope.m.marquees[0].header);
+
 	$scope.isCollapsed = true;
 	$scope.disabled = "disabled";
 
@@ -43,7 +59,7 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		return $scope.m = results;
 	});
 
-	
+
 
 	$scope.checkRelease = function(){
 		if($scope.search.m){
