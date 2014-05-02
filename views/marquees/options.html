@@ -57,6 +57,14 @@
 </button>
 <div collapse="isCollapsed">
 	<div class="well well-lg">
+		<input type="text" ng-model="input1">
+		<input type="checkbox" name="twolines" value="yes" ng-model="new"> Different sizes?
+		<input type="text" ng-show="new" ng-model="input2">
+		
+		<button type="submit" class="btn btn-default" ng-show="new" ng-click="addContent(marquee, input1, input2)">Save</button>
+		<button type="button" class="btn btn-default" ng-show="new">Toggle sizes</button>
+
+
 		<ul>
 			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-l'">hdr-l</a></li>
 			<li><a href="#" ng-click="marquee.headerStyle = 'hdr-l-m'">hdr-l-m</a></li>
