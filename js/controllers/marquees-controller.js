@@ -59,12 +59,24 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		return $scope.m = results;
 	});
 
-	$scope.addContent = function(marquee, input1, input2) {
-
+	$scope.saveContent = function(marquee, input1, input2) {
 		input1 = "<span>" + input1 + "</span>";
 		input2 = "<b>" + input2 + "</b>";
 
-		// console.log(input1 + input2);
+		return marquee.header = input1 + input2;
+	};
+
+	$scope.toggleSizes = function(marquee, input1, input2) {
+		var spanPattern = /^<span/;
+		var boldPattern = /^<b/;
+
+		if(marquee.header.match(spanPattern)){
+			input1 = "<b>" + input1 + "</b>";
+			input2 = "<span>" + input2 + "</span>";
+		} else if(marquee.header.match(boldPattern)){
+			input1 = "<span>" + input1 + "</span>";
+			input2 = "<b>" + input2 + "</b>";
+		}
 		return marquee.header = input1 + input2;
 	};
 
