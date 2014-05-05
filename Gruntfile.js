@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 				src: [
 					"js/libs/ui-bootstrap-tpls-0.10.0.min.js",
 					"js/libs/angular-ui-router.min.js",
-					"js/libs/xeditable.min.js",
+					"js/libs/xeditable.js",
 					"js/app.min.js"
 				]
 			},
