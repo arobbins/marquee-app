@@ -20,3 +20,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		}
 	})
 });;
+
+app.run(function(editableOptions) {
+  editableOptions.theme = 'bs3';
+});

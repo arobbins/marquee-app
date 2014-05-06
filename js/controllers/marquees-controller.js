@@ -59,6 +59,18 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		return $scope.m = results;
 	});
 
+
+	// add user
+	// $scope.addField = function() {
+	// 	$scope.inserted = {
+	// 		id: 1,
+	// 		name: '',
+	// 		status: null,
+	// 		group: null 
+	// 	};
+	// 	$scope.users.push($scope.inserted);
+	// };
+
 	$scope.saveContent = function(marquee, input1, input2) {
 		input1 = "<span>" + input1 + "</span>";
 		input2 = "<b>" + input2 + "</b>";
