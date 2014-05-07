@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'xeditable', 'ngDialog', 'ngSanitize']);
+var app = angular.module('app', ['ui.bootstrap', 'ui.router', 'ngDialog', 'ngSanitize']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
@@ -20,7 +20,3 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		}
 	})
 });;
-
-app.run(function(editableOptions) {
-  editableOptions.theme = 'bs3';
-});

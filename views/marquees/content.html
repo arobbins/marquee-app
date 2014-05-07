@@ -1,6 +1,6 @@
 <div class="marquee">
 	<div class="marquee-body tpl-{{ marquee.template }} theme-{{ marquee.theme }} type-{{ marquee.type }}">
-		<h1 editable-text="marquee.header" ng-bind-html="marquee.header" ng-if="marquee.header" class="{{ marquee.headerStyle }}">{{ marquee.header }}</h1>
+		<div click-to-edit></div>
 		<p editable-textarea="marquee.body" e-rows="7" e-cols="80">{{ marquee.body }}</p>
 		<div class="marquee-cta">
 			<a href="#" class="button" editable-text="marquee.button"><i></i>{{ marquee.button }}</a>

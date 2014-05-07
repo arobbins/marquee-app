@@ -24,14 +24,12 @@ module.exports = function(grunt) {
 				src: [
 					"js/libs/ui-bootstrap-tpls-0.10.0.min.js",
 					"js/libs/angular-ui-router.min.js",
-					"js/libs/xeditable.js",
 					"js/app.min.js"
 				]
 			},
 			css: {
 				dest: "css/styles.min.css",
 				src: [
-					"css/libs/xeditable.css",
 					"css/styles.min.css"
 				]
 			}
@@ -62,7 +60,8 @@ module.exports = function(grunt) {
 					"js/services/marquees-data.js",
 					"js/controllers/marquees-controller.js",
 					"js/directives/active-release.js",
-					"js/directives/marquees.js"
+					"js/directives/marquees.js",
+					"js/directives/editor.js"
 				]
 			}
 		},
