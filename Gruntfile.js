@@ -61,7 +61,9 @@ module.exports = function(grunt) {
 					"js/controllers/marquees-controller.js",
 					"js/directives/active-release.js",
 					"js/directives/marquees.js",
-					"js/directives/editor.js"
+					"js/directives/editor.js",
+					"js/directives/timeline.js",
+					"js/directives/likecontrol.js"
 				]
 			}
 		},

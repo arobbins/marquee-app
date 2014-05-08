@@ -31,6 +31,7 @@ app.directive("clickToEdit", function() {
 			};
 
 			$scope.toggle = function() {
+
 				var spanPattern = /^<span/;
 				var boldPattern = /^<b/;
 
@@ -41,7 +42,7 @@ app.directive("clickToEdit", function() {
 						$scope.marquee.header = "<span>" + $scope.data.firstLineCopy + "</span>" + "<b>" + $scope.data.secondLineCopy + "</b>";
 					}
 				} else {
-
+					console.log("No matches! Check logic in toggle function.");
 				}
 			};
 

@@ -47,6 +47,7 @@
 	background: url('../images/bg-theme.jpg') no-repeat top center;
 	background-size: cover;
 	display:block;
+	position: relative;
 }
 .options .well section{
 	float:left;
@@ -54,5 +55,89 @@
 		float: left;
 		list-style:none;
 		padding: 0 4em 0 0;
+	}
+}
+
+
+
+// Timeline styles
+.rsNav.rsTabs {
+	overflow:visible;
+	margin-top: 0px;
+	background: #00425c;
+	width:100%;
+	background-color: @thumbs; /* tertiarycolor?	*/
+	margin-left: 0;
+	padding-left: 5%;
+	.timeline {
+		text-align: justify;
+		border-left: 1px solid @tertiarycoloroffset;
+		box-sizing:border-box;
+		height:60px;
+		margin-right: 10%;
+		width: 97.6%;
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 70%;
+		}
+
+		.rsTab {
+			height: 100%;
+			float:left;
+			width: 19.5%;
+			display: inline-block;
+			border-collapse:separate;
+			cursor:pointer;
+			border-left: 1px solid @secondarycolor;
+			border-right: 1px solid @secondarycolor;
+			box-sizing:border-box;
+			padding: 1em 0 0 1em;
+			a{text-decoration: none;}
+			img {float:left; padding-right:0.5em;}
+			div {line-height:1.25; color: @white;}
+			p{
+				line-height: 1.3em;
+				margin-bottom: 0;
+				text-align: left;
+				width: 90%;
+				font-size: 1.3rem;
+			}
+			&.rsNavSelected {
+				background: @thumbs-on;
+			}
+		}
+	}
+}
+
+// Like Control
+.likeControl{
+	position: absolute;
+	top: 4%;
+	right: 4%;
+	.likeControlBG{
+		background: rgb(75, 133, 172);
+		.opacity(.8);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	.likeControlContent{
+		padding: .4em 1em;
+		color: @white;
+		font-size:1.3rem;
+		position: relative;
+		z-index: 10;
+		a, a:visited{
+			color: @white;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.like, .dislike{
+			padding-right: 0.7rem;
+		}
+		.dislike{padding: 0 .5em 0 .8em;border-left: 1px solid @secondarycolor;}
 	}
 }

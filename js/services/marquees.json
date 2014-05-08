@@ -14,7 +14,8 @@
 			"theme"			: "dark",
 			"headerStyle"	: "hdr-s",
 			"type"			: "cars",
-			"terms"			: "Terms and conditions apply"
+			"terms"			: "Terms and conditions apply",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "MayAdvBking0514",
@@ -29,7 +30,8 @@
 			"theme"			: "dark",
 			"headerStyle"	: "",
 			"type"			: "",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "MetLife0514",
@@ -44,7 +46,8 @@
 			"theme"			: "dark",
 			"headerStyle"	: "hdr-m-s",
 			"type"			: "",
-			"terms"			: "Terms and conditions apply"
+			"terms"			: "Terms and conditions apply",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "empirebuilder0113",
@@ -59,7 +62,8 @@
 			"theme"			: "dark",
 			"headerStyle"	: "hdr-m-xs",
 			"type"			: "",
-			"terms"			: "Terms and conditions apply"
+			"terms"			: "Terms and conditions apply",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey"	: "smartfares0214",
@@ -74,7 +78,8 @@
 			"theme"			: "light",
 			"headerStyle"	: "hdr-s",
 			"type"			: "",
-			"terms"			: "Terms and conditions apply"
+			"terms"			: "Terms and conditions apply",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "sharepoints0211",
@@ -89,7 +94,8 @@
 			"theme"			: "dark",
 			"headerStyle"	: "hdr-s-m",
 			"type"			: "",
-			"terms"			: "Terms and conditions apply"
+			"terms"			: "Terms and conditions apply",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey"	: "selectplusrequal0313",
@@ -104,7 +110,8 @@
 			"theme"			: "light",
 			"headerStyle"	: "hdr-s-l",
 			"type"			: "",
-			"terms"			: "Terms and conditions apply"
+			"terms"			: "Terms and conditions apply",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "amtrakbookingfall2012",
@@ -117,7 +124,8 @@
 			"toggled"		: false,
 			"release"		: "March-14",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "amtrakbrand0713",
@@ -130,7 +138,8 @@
 			"toggled"		: false,
 			"release"		: "December-13",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "facebook1112",
@@ -143,7 +152,8 @@
 			"toggled"		: false,
 			"release"		: "February-14",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey"	: "hyatt0913",
@@ -156,7 +166,8 @@
 			"toggled"		: false,
 			"release" 		: "March-14",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "metlife0913",
@@ -169,7 +180,8 @@
 			"toggled"		: false,
 			"release"		: "December-13",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "partneroi1113",
@@ -182,7 +194,8 @@
 			"toggled"		: false,
 			"release"		: "March-14",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "energyplus1213",
@@ -195,7 +208,8 @@
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "budgetJan2014",
@@ -208,7 +222,8 @@
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		},
 		{
 			"contentkey" 	: "pfw1013",
@@ -221,7 +236,8 @@
 			"toggled"		: false,
 			"release"		: "January-14",
 			"theme"			: "light",
-			"terms"			: ""
+			"terms"			: "",
+			"label"			: "Label text will go here"
 		}
 	]
 }
