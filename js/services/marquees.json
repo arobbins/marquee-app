@@ -15,7 +15,8 @@
 			"headerStyle"	: "hdr-s",
 			"type"			: "cars",
 			"terms"			: "Terms and conditions apply",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "MayAdvBking0514",
@@ -31,7 +32,8 @@
 			"headerStyle"	: "",
 			"type"			: "",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "MetLife0514",
@@ -47,7 +49,8 @@
 			"headerStyle"	: "hdr-m-s",
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "empirebuilder0113",
@@ -63,7 +66,8 @@
 			"headerStyle"	: "hdr-m-xs",
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey"	: "smartfares0214",
@@ -79,7 +83,8 @@
 			"headerStyle"	: "hdr-s",
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "sharepoints0211",
@@ -95,7 +100,8 @@
 			"headerStyle"	: "hdr-s-m",
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey"	: "selectplusrequal0313",
@@ -111,7 +117,8 @@
 			"headerStyle"	: "hdr-s-l",
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "amtrakbookingfall2012",
@@ -125,7 +132,8 @@
 			"release"		: "March-14",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "amtrakbrand0713",
@@ -139,7 +147,8 @@
 			"release"		: "December-13",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "facebook1112",
@@ -153,7 +162,8 @@
 			"release"		: "February-14",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey"	: "hyatt0913",
@@ -167,7 +177,8 @@
 			"release" 		: "March-14",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "metlife0913",
@@ -181,7 +192,8 @@
 			"release"		: "December-13",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "partneroi1113",
@@ -195,7 +207,8 @@
 			"release"		: "March-14",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "energyplus1213",
@@ -209,7 +222,8 @@
 			"release"		: "January-14",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "budgetJan2014",
@@ -223,7 +237,8 @@
 			"release"		: "January-14",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		},
 		{
 			"contentkey" 	: "pfw1013",
@@ -237,7 +252,8 @@
 			"release"		: "January-14",
 			"theme"			: "light",
 			"terms"			: "",
-			"label"			: "Label text will go here"
+			"label"			: "Label text will go here",
+			"showMobile"	: false
 		}
 	]
 }

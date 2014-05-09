@@ -9,8 +9,9 @@
 				</accordion-heading>
 
 				<!-- Custom directive to show the body of each marquee. Used to customize the HTML. -->
-				<marquees id="homeCarousel"></marquees>
-				<timeline></timeline>
+				<marquees class="homeCarousel"></marquees>
+				<tablet ng-show="marquee.showMobile"></tablet>
+				<phone ng-show="marquee.showMobile"></phone>
 
 				<!-- Options -->
 				<nav class="container-fluid options" ng-include src="'views/marquees/options.html'"></nav>

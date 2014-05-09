@@ -63,4 +63,11 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		});
 	};
 
+	$scope.showMobile = function(marquee) {
+		if(marquee.showMobile){
+			marquee.showMobile = false;
+		} else {
+			marquee.showMobile = true;
+		}
+	};
 });

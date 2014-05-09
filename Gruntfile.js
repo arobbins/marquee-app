@@ -63,7 +63,9 @@ module.exports = function(grunt) {
 					"js/directives/marquees.js",
 					"js/directives/editor.js",
 					"js/directives/timeline.js",
-					"js/directives/likecontrol.js"
+					"js/directives/likecontrol.js",
+					"js/directives/phone.js",
+					"js/directives/tablet.js"
 				]
 			}
 		},
