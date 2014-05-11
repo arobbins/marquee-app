@@ -8,7 +8,7 @@ Repository		|	https://github.com/arobbins/marquee-app
 
 1) CSS Structure
 ================
-extend.less 		|  Overrides for the plugins we use (X-edit, ngDialog, Bootstrap, etc)
+extends.less 		|  Overrides for the plugins we use (X-edit, ngDialog, Bootstrap, etc)
 components.less 	|  Structural elements (headers, sections, etc)
 templates.less 	|	Specific marquee templates (tpl-left, tpl-center, etc)
 mixins.less 		|	Code that we reuse throughout
@@ -16,6 +16,7 @@ variables.less 	|	Reusable variables
 media.less 			| 	Media query specifics
 main.less 			|	Our "main" stylesheet. Mostly imports the rest of the styles
 typography.less 	|	Styling for headlines, paragraphs, buttons, etc
+768.less 			|	Contains styles specifically for max-width 768px
 
 
 2) Definitions
@@ -30,17 +31,25 @@ hdr 	|	Header
 
 */
 
-@import "extend";
+
+// First, we're importing the styles that will extend the libraries we're calling from the <head>. We want it first in line to make sure we're extending before styling anything else.
+@import "extends";
+
+// Importing our fonts
 @font-face { font-family:"Frutiger Light"; src:url("fonts/frutigerltstd-light.woff") format("woff"), url("fonts/frutigerltstd-light.ttf") format("embedded-opentype"), url("fonts/frutigerltstd-light.svg#webfontwzdI1SE8") format("svg"); font-weight:normal; font-style:normal; }
 
-html{ // Mimicing prod
+// Mimicing prod - 10px base
+html{
 	font-size:62.5%;
 }
-body{ // Mimicing prod
+
+// Mimicing prod
+body{
 	margin: 0 auto;
 	font-family:@font-stack-secondary;
 }
 
+// The order here is important. We want our variables first as everything depends on their definitions. We want mixins after as mixins depends on variables and the rest of our styles depend on mixins. Components comes third as it's the bulk of our styles. Then media is last since it contains our media queries.
 @import "variables";
 @import "mixins";
 @import "components";

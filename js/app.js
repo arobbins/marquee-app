@@ -6,7 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 	.state('home', {
 		url: "/",
-		templateUrl: "../views/marquees/marquees.html",
+		templateUrl: "../views/marquees/wrapper.html",
 		controller: function($scope, $stateParams, MarqueeData){
 			$scope.onrelease = false;
 		}
@@ -14,7 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	})
 	.state('releases', {
 		url: "/{release}",
-		templateUrl: "../views/marquees/marquees.html",
+		templateUrl: "../views/marquees/wrapper.html",
 		controller: function($scope, $stateParams, MarqueeData){
 			$scope.search.release = $stateParams;
 		}

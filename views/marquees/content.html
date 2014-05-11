@@ -1,13 +1,13 @@
 <div class="marquee">
 	<div class="marquee-body tpl-{{ marquee.template }} theme-{{ marquee.theme }} type-{{ marquee.type }}">
-		<div click-to-edit></div>
-		<p editable-textarea="marquee.body" e-rows="7" e-cols="80">{{ marquee.body }}</p>
+		<h1 ng-if="marquee.header" class="{{ marquee.headerStyle }}" edit="{{ marquee.header }}">{{ marquee.header }}</h1>
+		<p edit="{{ marquee.body }}">{{ marquee.body }}</p>
 		<div class="marquee-cta">
-			<a href="#" class="button" editable-text="marquee.button"><i></i>{{ marquee.button }}</a>
+			<a href="#" class="button" edit="{{ marquee.button }}"><i></i>{{ marquee.button }}</a>
 			<span class="terms" ng-if="marquee.terms">{{ marquee.terms }}</span>
 		</div>
 	</div>
-	<img src="{{ marquee.image }}" class="img-responsive" alt="{{ marquee.title }}" />
+	<img src="{{ marquee.image }}" alt="{{ marquee.title }}" />
 </div>
 <timeline></timeline>
 <likecontrol></likecontrol>

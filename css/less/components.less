@@ -15,6 +15,8 @@
 	}
 	img{
 		display: block;
+		max-width: 100%;
+		height: auto;
 	}
 	@import "templates";
 	@import "typography";
@@ -31,7 +33,7 @@
 		font-weight: 800;
 	}
 	& + section{
-		max-width: 1440px;
+		max-width: 144rem;
 		margin: 0 auto;
 	}
 }
@@ -141,7 +143,7 @@
 	}
 }
 
-/* 
+/*
 	Phone specific styles
 	These are slimmed down from what's on the actual site. Didn't need to bring in all the HTML to mock it up.
 */
@@ -150,10 +152,11 @@
 }
 
 .phone {
-	float: right;
+	float: left;
 	max-width: 32.6rem;
+	margin-left:0;
 	a{
-		height: 19rem;	
+		height: 19rem;
 		display: inline-block;
 		border: 3px solid #aaaaaa;
 	}
@@ -205,14 +208,19 @@
 	}
 }
 
-/* 
-	Tablet specific styles
+/*
+	Tablet specific styles for the Marquee App.
 	These are slimmed down from what's on the actual site. Didn't need to bring in all the HTML to mock it up.
+
+	All of the styles below are to mock up the size of a 768 marquee for the app specifically
 */
 .tablet{
+	width: 53.33%;
 	float:left;
-	max-width:76.8rem;
+
+	// Removing the timeline image
 	.timeline{
 		img{display: none;}
 	}
+	@import (multiple) "768";
 }

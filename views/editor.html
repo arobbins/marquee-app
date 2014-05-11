@@ -1,22 +1,4 @@
-<div class="click-to-edit">
-
-	<!-- Edit link -->
-	<div ng-hide="data.editorEnabled">
-		<h1 ng-click="enableEditor()" ng-bind-html="marquee.header" ng-if="marquee.header" class="{{ marquee.headerStyle }}">{{ marquee.header }}</h1>
-	</div>
-
-	<!-- Editor -->
-	<div ng-show="data.editorEnabled" class="headline">
-		<input ng-model="data.firstLineCopy">
-
-		<div ng-show="data.secondLine">
-			<input ng-model="data.secondLineCopy">
-			<i class="fa fa-times-circle" ng-click="removeSecondLine()"></i>
-		</div>
-		<div>
-			<a href="#" ng-click="save()">Save</a> or <a ng-click="disableEditor()">cancel</a>
-		</div>
-		<a ng-click="newLine()" ng-hide="data.secondLine">Add new line</a>
-	</div>
-	
+<div ng-show="editor.enabled">
+	<input ng-model="editor.value">
+	<a href="#" ng-click="save()">Save</a>	or <a ng-click="disableEditor()">cancel</a>
 </div>

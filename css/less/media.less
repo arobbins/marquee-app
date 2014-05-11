@@ -1,38 +1,19 @@
 // Landscape
-@media screen and (max-width: 102rem){
+@media screen and (max-width: 1024px){
 	.marquee{
+		// Here we're setting our new base to 9px
 		font-size:0.9rem;
-		p{
-			width:100%;
+
+		.tpl-left, .tpl-partner, .tpl-routes {
+			top: 20%;
 		}
-
-		.tpl-left {
-
+		.tpl-center-btn-left,
+		.tpl-center-btn-right {
+			width: 66%;
+			margin-left: -33%;
 		}
-		.tpl-right {
-
-		}
-		.tpl-center {
-
-		}
-		.tpl-partner {
-
-		}
-		.tpl-routes {
-
-		}
-
-
 	}
-
 }
 
 // Portrait
-@media screen and (max-width: 76.8rem){
-	.marquee{
-		font-size:0.8rem;
-		p{
-			width:100%;
-		}
-	}
-}
+@import "768" screen and (max-width: 768px);

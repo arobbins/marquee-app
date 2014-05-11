@@ -2,15 +2,16 @@
 
 /* Left */
 .tpl-left {
-	top: 23%;
-	left: 10%;
-	width: 42%;
+	.leftAlignedContent;
 }
 /* Right */
 .tpl-right {
 	left: 55%;
 	top: 21%;
 	width: 50%;
+	h1{
+		width:85%;
+	}
 }
 /* Right center */
 .tpl-right-center {
@@ -26,13 +27,12 @@
 	width: 50%;
 	margin-left: -25%;
 	p {
-		width:75%;
+		width:71%;
 	}
 }
 .tpl-center-btn-left {
 	p {
 		float:right;
-		margin-left:2%;
 	}
 	.marquee-cta{
 		float:left;
@@ -41,7 +41,6 @@
 .tpl-center-btn-right {
 	p {
 		float:left;
-		margin-right:2%;
 	}
 	.marquee-cta{
 		float:right;
@@ -50,8 +49,9 @@
 /* Center button center */
 .tpl-center-btn-center {
 	top: 40%;
-	width: 60%;
-	margin: 0 20%;
+	left: 50%;
+	width: 50%;
+	margin-left:-25%;
 	text-align: center;
 	p {
 		width: 100%;
@@ -80,7 +80,7 @@
 		padding-bottom: 6.6%;
 		background: url('../images/bg-inset.png') no-repeat right 83%;
 		background-size: contain;
-		width: 30%;
+		width: 30.9%;
 	}
 	&[class*="type-"] {
 		.button {
@@ -118,7 +118,7 @@
 		background-position:0px 0px;
 	}
 }
-/* Routes - Can we just make the coordinates the same as left? Why the difference here? */
+/* Routes */
 .tpl-routes {
 	.leftAlignedContent;
 	& + img {
@@ -126,6 +126,7 @@
 		margin-left: 61%;
 		padding-top: 3%;
 		padding-bottom: 4.5%;
+		width: 20.9%;
 	}
 }
 /* Tiers */
@@ -133,7 +134,7 @@
   left: 44%;
   top: 20.5%;
 }
-/* Boardingbonus */
+/* Boardingbonus - todo: implement correct styles */
 .tpl-boardingbonus {
   top: 25%;
   left: 54%;

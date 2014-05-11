@@ -70,4 +70,5 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 			marquee.showMobile = true;
 		}
 	};
+
 });
