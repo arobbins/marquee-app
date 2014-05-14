@@ -16,7 +16,8 @@
 			"type"			: "cars",
 			"terms"			: "Terms and conditions apply",
 			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
+			"showMobile"	: false,
+			"CAID"			: 300
 		},
 		{
 			"contentkey" 	: "MayAdvBking0514",
@@ -33,7 +34,8 @@
 			"type"			: "",
 			"terms"			: "",
 			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
+			"showMobile"	: false,
+			"CAID"			: 300
 		},
 		{
 			"contentkey" 	: "MetLife0514",
@@ -50,7 +52,8 @@
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
 			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
+			"showMobile"	: false,
+			"CAID"			: 300
 		},
 		{
 			"contentkey" 	: "empirebuilder0113",
@@ -67,7 +70,8 @@
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
 			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
+			"showMobile"	: false,
+			"CAID"			: 300
 		},
 		{
 			"contentkey"	: "smartfares0214",
@@ -84,7 +88,8 @@
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
 			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
+			"showMobile"	: false,
+			"CAID"			: 300
 		},
 		{
 			"contentkey" 	: "sharepoints0211",
@@ -101,7 +106,8 @@
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
 			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
+			"showMobile"	: false,
+			"CAID"			: 300
 		},
 		{
 			"contentkey"	: "selectplusrequal0313",
@@ -118,127 +124,8 @@
 			"type"			: "",
 			"terms"			: "Terms and conditions apply",
 			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey" 	: "amtrakbookingfall2012",
-			"title"			: "Amtrak Booking",
-			"template" 		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image" 			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release"		: "March-14",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey" 	: "amtrakbrand0713",
-			"title"			: "Amtrak Brand",
-			"template" 		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image" 			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release"		: "December-13",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey" 	: "facebook1112",
-			"title"			: "Facebook",
-			"template" 		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image" 			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release"		: "February-14",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey"	: "hyatt0913",
-			"title"			: "Hyatt",
-			"template"		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image"			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release" 		: "March-14",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey" 	: "partneroi1113",
-			"title"			: "Partner",
-			"template" 		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image" 			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release"		: "March-14",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey" 	: "energyplus1213",
-			"title"			: "Energy Plus",
-			"template" 		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image" 			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release"		: "January-14",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey" 	: "budgetJan2014",
-			"title"			: "Budget",
-			"template" 		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image" 			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release"		: "January-14",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
-		},
-		{
-			"contentkey" 	: "pfw1013",
-			"title"			: "Points for Wireless",
-			"template" 		: "left",
-			"header" 		: "Lorem ipsum dolor sit amet consecteturer",
-			"body" 			: "Body",
-			"button" 		: "Button",
-			"image" 			: "../images/marquee.jpeg",
-			"toggled"		: false,
-			"release"		: "January-14",
-			"theme"			: "light",
-			"terms"			: "",
-			"label"			: "Excepteur sint occaecat cupida",
-			"showMobile"	: false
+			"showMobile"	: false,
+			"CAID"			: 300
 		}
 	]
 }

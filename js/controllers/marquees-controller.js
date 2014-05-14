@@ -5,8 +5,8 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 
 	// Storing all of our marquees in this m object when we search
 	$scope.search = {
-	    m: '',
-	    release: ''
+		m: '',
+		release: ''
 	};
 
 	// Setting the results of making the AJAX call to our 'm' object.
@@ -23,9 +23,17 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 		return $scope.onrelease;
 	};
 
-	$scope.clickToOpen = function () {
+	$scope.newRelease = function () {
 		ngDialog.open({
-			template: '../../views/newrelease.html',
+			template: '../../views/release/newrelease.html',
+			className: 'ngdialog-theme-plain',
+			scope: $scope
+		});
+	};
+
+	$scope.newMarquee = function () {
+		ngDialog.open({
+			template: '../../views/release/newmarquee.html',
 			className: 'ngdialog-theme-plain',
 			scope: $scope
 		});
@@ -70,5 +78,10 @@ app.controller('MarqueesCtrl', function($scope, $stateParams, ngDialog, MarqueeD
 			marquee.showMobile = true;
 		}
 	};
+
+
+
+
+
 
 });

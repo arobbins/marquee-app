@@ -1,6 +1,6 @@
-<nav class="container-fluid">
+<nav class="container-fluid" ng-show="marqueesInRelease">
 	<div class="btn-group pull-left">
-		<button type="button" class="btn btn-default" ng-class="disabled" ng-click="addMarquee()"><i class="fa fa-plus"></i> Marquee</button>
+		<button type="button" class="btn btn-default" ng-click="newMarquee()"><i class="fa fa-plus"></i> Marquee</button>
 		<button type="button" class="btn btn-default"><i class="fa fa-floppy-o"></i> Export</button>
 	</div>
 	<h2 class="h4 pull-left">{{ m.marquees[0].release }} Release</h2>
